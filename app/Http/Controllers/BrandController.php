@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateBrandRequest;
+use App\Http\Requests\DetailBrandRequest;
+use App\Http\Requests\UpdateBrandRequest;
 use Illuminate\Http\JsonResponse;
 use Yajra\DataTables\DataTables;
 use Illuminate\View\View;
@@ -30,7 +33,7 @@ class BrandController extends Controller
         }
     }
 
-    public function save(Request $request): JsonResponse
+    public function save(CreateBrandRequest $request): JsonResponse
     {
 
         $brands = new Brand();
@@ -49,7 +52,7 @@ class BrandController extends Controller
         ]) -> setStatusCode(200);
     }
 
-    public function detail(Request $request): JsonResponse
+    public function detail(DetailBrandRequest $request): JsonResponse
     {  
         $id = $request -> id;
         $data = Brand::find($id);
@@ -58,7 +61,7 @@ class BrandController extends Controller
         )->setStatusCode(200);
     }
 
-    public function update(Request $request): JsonResponse
+    public function update(UpdateBrandRequest $request): JsonResponse
     {
         $id = $request -> id;
         $data = Brand::find($id);
