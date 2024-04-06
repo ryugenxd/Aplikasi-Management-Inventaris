@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CreateBrandRequest;
 use App\Http\Requests\DetailBrandRequest;
 use App\Http\Requests\UpdateBrandRequest;
+use App\Http\Requests\DeleteBrandRequest;
 use Illuminate\Http\JsonResponse;
 use Yajra\DataTables\DataTables;
 use Illuminate\View\View;
@@ -77,7 +78,7 @@ class BrandController extends Controller
         ]) -> setStatusCode(200);
     }
 
-    public function delete(Request $request)
+    public function delete(DeleteBrandRequest $request)
     {
         $id = $request -> id;
         $brands = Brand::find($id);
