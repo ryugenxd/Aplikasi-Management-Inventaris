@@ -5,5 +5,4 @@ code full requirements
 
 - Full Ajax
 - Datatable Server Side
-- 3 role , super_admin,admin,staff
-
+- 3 role : super_admin,admin,and staff
