@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateCategoryRequest;
+use App\Http\Requests\DetailCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Requests\DeleteCategoryRequest;
 use Illuminate\View\View;
 use Yajra\DataTables\DataTables;
 use Illuminate\Http\JsonResponse;
@@ -30,7 +34,7 @@ class CategoryController extends Controller
         }
     }
 
-    public function save(Request $request): JsonResponse
+    public function save(CreateCategoryRequest $request): JsonResponse
     {
 
         $category = new Category();
@@ -49,7 +53,7 @@ class CategoryController extends Controller
         ]) -> setStatusCode(200);
     }
 
-    public function detail(Request $request): JsonResponse
+    public function detail(DetailCategoryRequest $request): JsonResponse
     {  
         $id = $request -> id;
         $data = Category::find($id);
@@ -58,7 +62,7 @@ class CategoryController extends Controller
         )->setStatusCode(200);
     }
 
-    public function update(Request $request): JsonResponse
+    public function update(UpdateCategoryRequest $request): JsonResponse
     {
         $id = $request -> id;
         $data = Category::find($id);
@@ -74,7 +78,7 @@ class CategoryController extends Controller
         ]) -> setStatusCode(200);
     }
 
-    public function delete(Request $request)
+    public function delete(DeleteCategoryRequest $request)
     {
         $id = $request -> id;
         $category = Category::find($id);
