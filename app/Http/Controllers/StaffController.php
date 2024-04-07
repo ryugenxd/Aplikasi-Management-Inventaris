@@ -81,7 +81,15 @@ class StaffController extends Controller
     {
         $id = $request -> id;
         $user = User::find($id);
-        $user -> fill($request->all());
+        if(!empty($request->password)){
+            $user -> password = $request -> password;
+        }
+        if($request->has('name')){
+            $user -> name = $request -> name;
+        }
+        if($request->has('username')){
+            $user -> username = $request -> username;
+        }
         $status = $user -> save();
         if(!$status){
             return response()->json(

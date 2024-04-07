@@ -18,7 +18,7 @@
       <li class="nav-item">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center">
         <div class="info font-weight-bold" style="text-transform:capitalize;">
-            <a href="#" class="d-block" style="color:gray !important;">{{Auth::user()->name}}</a>
+            <a href="#" class="d-block" style="color:gray !important;" id="user">{{Auth::user()->name}}</a>
           </div>
           <div class="image">
             <img src="{{asset('user.png')}}" class="img-circle elevation-2" alt="User Image">

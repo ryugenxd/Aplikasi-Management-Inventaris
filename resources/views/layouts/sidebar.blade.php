@@ -152,7 +152,7 @@
                 </a>
               </li> -->
               <li class="nav-item">
-                <a href="" class="nav-link text-white">
+                <a href="{{route('settings.profile')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
                   <p>Profile</p>
                 </a>

@@ -195,6 +195,7 @@
             $("#password").val(null);
             $("#role").val('-- Role --');
             $("#simpan").text("Simpan");
+            $("#TambahDataModalLabel").text("Tambah Profile Staff");
         });
 
 

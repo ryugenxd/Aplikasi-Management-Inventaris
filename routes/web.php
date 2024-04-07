@@ -17,6 +17,7 @@ use App\Http\Controllers\ReportStockController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\WebSettingController;
 use App\Http\Controllers\AdminatorController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/',[LoginController::class,'index'])->name('login');
 Route::post('/',[LoginController::class,'auth'])->name('login.auth');
@@ -119,6 +120,8 @@ Route::middleware(['auth'])-> group(function(){
         // Route::get('/pengaturan/web/detail',[WebSettingController::class,'detail'])->name('settings.web.detail');
         // Route::post('/pengaturan/web/detail/role',[WebSettingController::class,'detailRole'])->name('settings.web.detail.role');
         // Route::put('/pengaturan/web/update',[WebSettingController::class,'update'])->name('settings.web.update');
+
+        Route::get('/pengeturan/profile',[ProfileController::class,'index'])->name('settings.profile');
     });
 
 
