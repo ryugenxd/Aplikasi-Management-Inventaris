@@ -15,13 +15,24 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item dropdown" data-toggle="dropdown" >
         <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center">
         <div class="info font-weight-bold" style="text-transform:capitalize;">
-            <a href="#" class="d-block" style="color:gray !important;" id="user">{{Auth::user()->name}}</a>
+            <a href="javascript:void(0)" class="d-block" style="color:gray !important;" id="user">{{Auth::user()->name}}</a>
           </div>
           <div class="image">
             <img src="{{asset('user.png')}}" class="img-circle elevation-2" alt="User Image">
+          </div>
+        </div>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <div class="dropdown-divider"></div>
+            <a onclick="window.location.href=`{{route('settings.profile')}}`" class="dropdown-item w-100">
+              <i class="fas fa-user mr-2"></i> Profile
+            </a>
+            <div class="dropdown-divider"></div>
+            <a onclick="window.location.href=`{{route('login.delete')}}`" class="dropdown-item w-100">
+              <i class="fas fa-sign-out-alt mr-2"></i> LogOut
+            </a>
           </div>
         </div>
       </li>
