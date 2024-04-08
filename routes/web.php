@@ -116,12 +116,12 @@ Route::middleware(['auth'])-> group(function(){
 
 
     Route::middleware(['staff.middleware'])->group(function(){
-        Route::get('/pengaturan/petugas',[StaffController::class,'index'])->name('settings.staff');
-        Route::get('/pengaturan/petugas/list',[StaffController::class,'list'])->name('settings.staff.list');
-        Route::post('/pengaturan/petugas/save',[StaffController::class,'save'])->name('settings.staff.save');
-        Route::post('/pengaturan/petugas/detail',[StaffController::class,'detail'])->name('settings.staff.detail');
-        Route::put('/pengaturan/petugas/update',[StaffController::class,'update'])->name('settings.staff.update');
-        Route::delete('/pengaturan/petugas/delete',[StaffController::class,'delete'])->name('settings.staff.delete');
+        Route::get('/pengaturan/pengguna',[StaffController::class,'index'])->name('settings.users');
+        Route::get('/pengaturan/pengguna/list',[StaffController::class,'list'])->name('settings.staff.list');
+        Route::post('/pengaturan/pengguna/save',[StaffController::class,'save'])->name('settings.staff.save');
+        Route::post('/pengaturan/pengguna/detail',[StaffController::class,'detail'])->name('settings.staff.detail');
+        Route::put('/pengaturan/pengguna/update',[StaffController::class,'update'])->name('settings.staff.update');
+        Route::delete('/pengaturan/pengguna/delete',[StaffController::class,'delete'])->name('settings.staff.delete');
     });
         // Route::get('/pengaturan/web',[WebSettingController::class,'index'])->name('settings.web');
         // Route::get('/pengaturan/web/detail',[WebSettingController::class,'detail'])->name('settings.web.detail');
