@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="d-flex flex-column justify-content-center align-items-center w-100">
                         <label for="image">
-                        <img src="{{asset('user.png')}}"  class="img-circle elevation-2" alt="profile">
+                        <img id="photo_profile" src="{{ empty(Auth::user()->image) ? asset('user.png'):asset('storage/profile/'.Auth::user()->image)}}"  class="img-circle elevation-2" style="width:100% !important;max-width:240px !important;aspect-ratio:1 !important;object-fit:cover !important;" alt="profile">
                         </label>
                         <input class="d-none" type="file" accept="image/*" name="image" id="image">
                         <h1 class="h1 text-uppercase font-weight-bold" id="name_user">{{Auth::user()->name}}</h1>
@@ -37,39 +37,57 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+$(document).ready(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    const profile_image = $("#photo_profile");
+    const image = $("input[name='image']");
+    const id = $("input[name='id']");
+    const name = $("input[name='name']");
+    const username = $("input[name='username']");
+    const password = $("input[name='password']");
+    
+    image.change(function(event){
+        const reader = new FileReader();
+        reader.onload = function(){
+            profile_image.attr('src', reader.result);
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    });
+    
+    $("#simpan").click(function(){
+        const formData = new FormData();
+        formData.append('id', id.val());
+        formData.append('image', image[0].files[0]);
+        formData.append('name', name.val());
+        formData.append('username', username.val());
+        formData.append('password', password.val());
 
-        const id = $("input[name='id']");
-        const name = $("input[name='name']");
-        const username = $("input[name='username']");
-        const password = $("input[name='password']");
-        
-        $("#simpan").click(function(){
-           $.ajax({
-            url:`{{route('settings.staff.update')}}`,
-            type:'put',
-            data:{id:id.val(),name:name.val(),username:username.val(),password:password.val()},
-            success:function(res){
+        $.ajax({
+            url: "{{route('settings.profile.update')}}",
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(res){
                 Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: res.message,
-                        showConfirmButton: false,
-                        timer: 1500
+                    position: "center",
+                    icon: "success",
+                    title: res.message,
+                    showConfirmButton: false,
+                    timer: 1500
                 });
                 $("#name_user").text(name.val());
                 $("#user").text(name.val());
             },
-            error:function(err){
-                console.log(err.responJson.text);
+            error: function(err){
+                console.log(err.responseText);
             },
-           });
         });
     });
+});
 </script>
 @endsection

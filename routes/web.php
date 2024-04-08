@@ -129,6 +129,7 @@ Route::middleware(['auth'])-> group(function(){
         // Route::put('/pengaturan/web/update',[WebSettingController::class,'update'])->name('settings.web.update');
 
         Route::get('/pengeturan/profile',[ProfileController::class,'index'])->name('settings.profile');
+        Route::post('/pengeturan/profile',[ProfileController::class,'update'])->name('settings.profile.update');
 
 
     Route::get('/logout',[LoginController::class,'logout'])->name('login.delete');
