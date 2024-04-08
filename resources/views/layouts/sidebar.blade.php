@@ -137,14 +137,15 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-           @if(Auth::user()->role->name != 'staff')
             <ul class="nav nav-treeview">
+            @if(Auth::user()->role->name != 'staff')
               <li class="nav-item">
                 <a href="{{route('settings.staff')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
                   <p>Petugas</p>
                 </a>
               </li>
+            @endif
               <!-- <li class="nav-item">
                 <a href="" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
@@ -158,7 +159,6 @@
                 </a>
               </li>
             </ul>
-            @endif
           </li>
           <li class="nav-item">
               <a href="{{route('login.delete')}}" class="nav-link text-white">

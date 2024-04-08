@@ -5,10 +5,9 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 
-class UserMiddleware
+class StaffMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,9 +16,9 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user = Auth::user();
-        $setting = json_decode(Setting::first()->config);
-        
-        return $next($request);
+        if(Auth::user()->role->name == 'staff'){
+            return redirect()->back(); 
+        }
+        return $next($request); 
     }
 }

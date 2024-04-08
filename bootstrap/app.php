@@ -3,9 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\UserMiddleware;
-use App\Http\Middleware\AdminOnlyMiddleware;
-use App\Http\Middleware\StaffOnlyMiddleware;
+use App\Http\Middleware\StaffMiddleware;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -15,9 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware -> alias([
-            'user.middleware'=>UserMiddleware::class,
-            'admin.only.middleware'=>AdminOnlyMiddleware::class,
-            'staff.only.middleware'=>StaffOnlyMiddleware::class,
+            'staff.middleware'=>StaffMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
