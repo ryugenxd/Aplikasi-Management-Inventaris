@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use App\Models\User;
 
@@ -19,6 +20,9 @@ class ProfileController extends Controller
         $id = $request -> id;
         $user = User::find($id);
         if(!empty($request->file('image'))){
+          if(Storage::disk('local')->exists('public/profile/'.$user->image)){
+           Storage::delete('public/profile/'.$user->image);
+          }
           $image = $request->file('image');
           $image -> storeAs('public/profile/',$image->hashName());
           $user -> image = $image->hashName();

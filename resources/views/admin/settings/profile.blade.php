@@ -82,6 +82,11 @@ $(document).ready(function(){
                 });
                 $("#name_user").text(name.val());
                 $("#user").text(name.val());
+                const reader = new FileReader();
+                reader.onload = function(){
+                    $("#img_profile").attr('src', reader.result);
+                };
+                reader.readAsDataURL(image[0].files[0]);
             },
             error: function(err){
                 console.log(err.responseText);

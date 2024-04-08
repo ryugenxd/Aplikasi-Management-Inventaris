@@ -21,7 +21,7 @@
             <a href="javascript:void(0)" class="d-block" style="color:gray !important;" id="user">{{Auth::user()->name}}</a>
           </div>
           <div class="image">
-            <img src="{{ empty(Auth::user()->image) ? asset('user.png'):asset('storage/profile/'.Auth::user()->image)}}" class="img-circle elevation-2" style="width:100% !important;max-width:35px !important;aspect-ratio:1 !important;object-fit:cover !important;" alt="User Image">
+            <img src="{{ empty(Auth::user()->image) ? asset('user.png'):asset('storage/profile/'.Auth::user()->image)}}" class="img-circle elevation-2" style="width:100% !important;max-width:35px !important;aspect-ratio:1 !important;object-fit:cover !important;" id="img_profile" alt="User Image">
           </div>
         </div>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

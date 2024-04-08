@@ -73,7 +73,7 @@
               <div class="inner">
                 <h3>{{$goodsin}}</h3>
 
-                <p class="font-weight-bold">Barang Masuk</p>
+                <p class="font-weight-bold">Transaksi Masuk</p>
               </div>
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
@@ -88,7 +88,7 @@
               <div class="inner" style="color:white !important;">
                 <h3>{{$goodsout}}</h3>
 
-                <p class="font-weight-bold">Barang Keluar</p>
+                <p class="font-weight-bold">Transaksi Keluar</p>
               </div>
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
