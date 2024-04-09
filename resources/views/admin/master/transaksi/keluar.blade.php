@@ -155,9 +155,7 @@
         }
     });
 
-    function pilih(){
-
-    }
+    
 
     function load(){
         $('#data-barang').DataTable({
@@ -305,10 +303,21 @@
                     $("select[name='satuan_barang']").val(null);
                     $("input[name='jumlah']").val(0);
                     $('#data-tabel').DataTable().ajax.reload();
-                },
-                error:function(err){
-                    console.log(err);
             },
+            statusCode:{
+                400:function(res){
+                    const  {message} =res.responseJSON;
+                    Swal.fire({
+                        position: "center",
+                        icon: "warning",
+                        title: "Oops...",
+                        text:message,
+                        showConfirmButton: false,
+                        timer: 1900
+                    });
+                }
+            }
+                
         })     
     }
 

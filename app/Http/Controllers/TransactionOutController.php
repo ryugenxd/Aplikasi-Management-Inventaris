@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 use App\Models\GoodsOut;
+use App\Models\GoodsIn;
 use App\Models\Customer;
 use App\Models\Item;
 use Yajra\DataTables\DataTables;
@@ -52,6 +53,19 @@ class TransactionOutController extends Controller
 
     public function save(Request $request):JsonResponse
     {
+
+        $currentMonth = date('m',strtotime($request->date_out));
+        $currentYear = date('Y',strtotime($request->date_out));
+        $goodsInThisMonth = GoodsIn::whereMonth('date_received', $currentMonth)
+        ->whereYear('date_received', $currentYear)->sum('quantity');
+        $goodsOutThisMonth = GoodsOut::whereMonth('date_out', $currentMonth)
+        ->whereYear('date_out', $currentYear)->sum('quantity');
+        $totalStockThisMonth = max(0,$goodsInThisMonth - $goodsOutThisMonth);
+        if($request->quantity > $totalStockThisMonth || $totalStockThisMonth == 0){
+            return  response()->json([
+                "message"=>"stok barang tidak mencukupi di bulan ini"
+            ]) -> setStatusCode(400);
+        }
         $data = [
             'item_id'=>$request->item_id,
             'user_id'=>$request->user_id,

@@ -18,6 +18,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\WebSettingController;
 use App\Http\Controllers\AdminatorController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportFinancialController;
 
 Route::get('/',[LoginController::class,'index'])->name('login');
 Route::post('/',[LoginController::class,'auth'])->name('login.auth');
@@ -100,19 +101,20 @@ Route::middleware(['auth'])-> group(function(){
     Route::put('/transaksi/keluar/update',[TransactionOutController::class,'update'])->name('transaksi.keluar.update');
     Route::delete('/transaksi/keluar/delete',[TransactionOutController::class,'delete'])->name('transaksi.keluar.delete');
 
-        // Laporan Transaksi Masuk
+
     Route::get('/laporan/masuk',[ReportGoodsInController::class,'index'])->name('laporan.masuk');
     Route::get('/laporan/masuk/list',[ReportGoodsInController::class,'list'])->name('laporan.masuk.list');
 
 
-        // Laporan Transaksi Keluar
+  
     Route::get('/laporan/keluar',[ReportGoodsOutController::class,'index'])->name('laporan.keluar');
     Route::get('/laporan/keluar/list',[ReportGoodsOutController::class,'list'])->name('laporan.keluar.list');
 
-        // Laporan Stok Barang
     Route::get('/laporan/stok',[ReportStockController::class,'index'])->name('laporan.stok');
     Route::get('/laporan/stok/list',[ReportStockController::class,'list'])->name('laporan.stok.list');
+    Route::get('/laporan/stok/grafik',[ReportStockController::class,'grafik'])->name('laporan.stok.grafik');
 
+    Route::get('/laporan/pendapatan',[ReportFinancialController::class,'income'])->name('laporan.pendapatan');
 
 
     Route::middleware(['staff.middleware'])->group(function(){
@@ -123,13 +125,14 @@ Route::middleware(['auth'])-> group(function(){
         Route::put('/pengaturan/pengguna/update',[StaffController::class,'update'])->name('settings.staff.update');
         Route::delete('/pengaturan/pengguna/delete',[StaffController::class,'delete'])->name('settings.staff.delete');
     });
-        // Route::get('/pengaturan/web',[WebSettingController::class,'index'])->name('settings.web');
-        // Route::get('/pengaturan/web/detail',[WebSettingController::class,'detail'])->name('settings.web.detail');
-        // Route::post('/pengaturan/web/detail/role',[WebSettingController::class,'detailRole'])->name('settings.web.detail.role');
-        // Route::put('/pengaturan/web/update',[WebSettingController::class,'update'])->name('settings.web.update');
+    
+    // Route::get('/pengaturan/web',[WebSettingController::class,'index'])->name('settings.web');
+    // Route::get('/pengaturan/web/detail',[WebSettingController::class,'detail'])->name('settings.web.detail');
+    // Route::post('/pengaturan/web/detail/role',[WebSettingController::class,'detailRole'])->name('settings.web.detail.role');
+    // Route::put('/pengaturan/web/update',[WebSettingController::class,'update'])->name('settings.web.update');
 
-        Route::get('/pengeturan/profile',[ProfileController::class,'index'])->name('settings.profile');
-        Route::post('/pengeturan/profile',[ProfileController::class,'update'])->name('settings.profile.update');
+    Route::get('/pengeturan/profile',[ProfileController::class,'index'])->name('settings.profile');
+    Route::post('/pengeturan/profile',[ProfileController::class,'update'])->name('settings.profile.update');
 
 
     Route::get('/logout',[LoginController::class,'logout'])->name('login.delete');

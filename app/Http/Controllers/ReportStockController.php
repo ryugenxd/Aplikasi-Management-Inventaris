@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 use App\Models\Item;
+use App\Models\GoodsIn;
+use App\Models\GoodsOut;
 use Yajra\DataTables\DataTables;
 
 class ReportStockController extends Controller
@@ -56,5 +58,28 @@ class ReportStockController extends Controller
             ->rawColumns(['total'])
             ->make(true);
         }
+    }
+
+    public function grafik(Request $request): JsonResponse
+    {
+        if($request->has('month') && !empty($request->month) ){
+            $month = $request->month;
+            $currentMonth = preg_split("/[-\s]/", $month)[1];
+            $currentYear = preg_split("/[-\s]/", $month)[0];
+        }else{
+            $currentMonth = date('m');
+            $currentYear = date('Y');
+        }
+        $goodsInThisMonth = GoodsIn::whereMonth('date_received', $currentMonth)
+        ->whereYear('date_received', $currentYear)->sum('quantity');
+        $goodsOutThisMonth = GoodsOut::whereMonth('date_out', $currentMonth)
+        ->whereYear('date_out', $currentYear)->sum('quantity');
+        $totalStockThisMonth = max(0,$goodsInThisMonth - $goodsOutThisMonth);
+        return response()->json([
+            'month'=>$currentYear.'-'.$currentMonth,
+            'goods_in_this_month' => $goodsInThisMonth,
+            'goods_out_this_month' => $goodsOutThisMonth,
+            'total_stock_this_month' => $totalStockThisMonth,
+        ]);
     }
 }

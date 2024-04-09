@@ -143,271 +143,222 @@
           </div>
 
   </div>
-  <!-- /.row -->
+</div>
 
-
-</div><!-- /.container-fluid -->
-<!-- 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-lg-6">
       <div class="card">
         <div class="card-header">
-          <h1 class="card-title text-lg font-weight-bold">BARANG MASUK TAHUN INI</h1>
+          <h1 class="card-title text-lg font-weight-bold">TRANSAKSI BARANG BULAN INI</h1>
         </div>
         <div class="card-body">
-          <div class="tab-content p-0">
-                  <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                   </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                  </div>
+          <div class="row  d-flex justify-content-start align-items-center">
+            <div class="col-6">
+              <label for="month" class="form-label">Pilih Bulan</label>
+              <div class="input-group mb-3">
+                <div class="w-100 mb-3 d-flex align-items-center py-3">
+                  <input type="month" name="month" id="month" class="form-control w-50">
+                  <button id="filter" class="btn btn-primary mx-2"><i class="fas fa-filter"></i>Filter</button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="tab-content p-0">
+            <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+              <canvas id="stok-barang" height="300" style="height: 300px;"></canvas>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-12 col-lg-6">
+      
       <div class="card">
         <div class="card-header">
-          <h1 class="card-title text-lg font-weight-bold">BARANG KELUAR TAHUN INI</h1>
+            <h1 class="card-title text-lg font-weight-bold">PENDAPAN DAN PENGELUARAN BULAN INI</h1>
         </div>
-        <div class="card-body">
+          <div class="card-body">
+            <div class="row  d-flex justify-content-start align-items-center">
+              <div class="col-6">
+                <label for="month-income" class="form-label">Pilih Bulan</label>
+                <div class="input-group mb-3">
+                  <div class="w-100 mb-3 d-flex align-items-center py-3">
+                    <input type="month" name="month-income" id="month-income" class="form-control w-50">
+                    <button id="filter-income" class="btn btn-primary mx-2"><i class="fas fa-filter"></i>Filter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content p-0">
+              <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+                <canvas id="pendapatan" height="300" style="height: 300px;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-header">
-          <h1 class="card-title text-lg font-weight-bold">BARANG  TAHUN INI</h1>
-        </div>
-        <div class="card-body">
-
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-header">
-          <h1 class="card-title text-lg font-weight-bold">PENDAPATAN  TAHUN INI</h1>
-        </div>
-        <div class="card-body">
-
-        </div>
-      </div>
     </div>
   </div>
-</div> -->
+</div> 
 
-
-
-<!-- ChartJS
 <script src="{{asset('theme/plugins/chart.js/Chart.min.js')}}"></script>
 <script>
-    /* Chart.js Charts */
-  // Sales chart
-  var salesChartCanvas = document.getElementById('revenue-chart-canvas').getContext('2d')
-  // $('#revenue-chart').get(0).getContext('2d');
-
-  var salesChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'Digital Goods',
-        backgroundColor: 'rgba(60,141,188,0.9)',
-        borderColor: 'rgba(60,141,188,0.8)',
-        pointRadius: false,
-        pointColor: '#3b8bba',
-        pointStrokeColor: 'rgba(60,141,188,1)',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(60,141,188,1)',
-        data: [28, 48, 40, 19, 86, 27, 90]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'Electronics',
-        backgroundColor: 'rgba(210, 214, 222, 1)',
-        borderColor: 'rgba(210, 214, 222, 1)',
-        pointRadius: false,
-        pointColor: 'rgba(210, 214, 222, 1)',
-        pointStrokeColor: '#c1c7d1',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [65, 59, 80, 81, 56, 55, 40]
-      }
-    ]
+  function formatIDR(angka) {
+      const strAngka = angka.toString().replace(/[^0-9]/g,'');
+      if (!strAngka) return '';
+      const parts = strAngka.split('.');
+      let intPart = parts[0];
+      const decPart = parts.length > 1 ? '.' + parts[1] : '';
+      intPart = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      const result = 'RP.' + ''+intPart+decPart;
+      return result;
   }
 
-  var salesChartOptions = {
-    maintainAspectRatio: false,
-    responsive: true,
-    legend: {
-      display: false
-    },
-    scales: {
-      xAxes: [{
-        gridLines: {
-          display: false
-        }
-      }],
-      yAxes: [{
-        gridLines: {
-          display: false
-        }
-      }]
-    }
-  }
+  $(document).ready(function() {
 
-  // This will get the first returned node in the jQuery collection.
-  // eslint-disable-next-line no-unused-vars
-  var salesChart = new Chart(salesChartCanvas, { // lgtm[js/unused-local-variable]
-    type: 'bar',
-    data: salesChartData,
-    options: salesChartOptions
-  });
-</script> -->
+        function getDataWithMonth(){
+          const month = $("input[name='month']").val();
+          $.ajax({
+            url: `{{route('laporan.stok.grafik')}}`,
+            data:{month},
+            dataType: 'json',
+            success: function(data) {
+              $("input[name='month']").val(data.month);
+              const chartstok_barang =  document.getElementById('stok-barang').getContext('2d'); 
+              const data_stok = {
+              labels:['Barang Masuk', 'Barang Keluar', 'Total Stok'],
+              datasets: [{
+                label: 'Jumlah',
+                data: [data.goods_in_this_month, data.goods_out_this_month, data.total_stock_this_month],
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                  ],
+                  borderWidth: 1
+               }]
+              
+             }
+             const opsi = {
+              maintainAspectRatio: false,
+              responsive: true,
+              legend: {
+                display: false
+              },
+              scales: {
+                xAxes: [{
+                  gridLines: {
+                    display: false
+                  }
+                }],
+                yAxes: [{
+                    ticks: {
+                      beginAtZero:true,
+                      callback: function(value, index, values) {
+                          return Math.floor(value);
+                      }
+                  },
+                  gridLines: {
+                    display: false
+                  }
+                }]
+              }
+             }
+
+              const ChartStokBarang = new Chart(chartstok_barang,{
+                type:'bar',
+                data:data_stok,
+                options:opsi
+              });
+            }
+          });
+        }
+        $("#filter").click(getDataWithMonth);
+        getDataWithMonth();
+
+
+        function getDataIncomeWithMonth(){
+          const month = $("input[name='month-income']").val();
+          $.ajax({
+            url: `{{route('laporan.pendapatan')}}`,
+            data:{month},
+            dataType: 'json',
+            success: function(data) {
+              $("input[name='month-income']").val(data.bulan);
+              const pendapatan =  document.getElementById('pendapatan').getContext('2d'); 
+              const data_income = {
+              labels:['Pengeluaran','Pendapatan', 'Total Pendapatan'],
+              datasets: [{
+                label: 'harga',
+                data: [data.pengeluaran,data.pendapatan, data.total],
+                  backgroundColor: [
+                    'rgba(245, 86, 86, 0.8)',
+                    'rgba(245, 86, 217, 0.8)',
+                    'rgba(86, 245, 124, 0.8)',
+                  ],
+                  borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                  ],
+                  borderWidth: 1
+               }]
+              
+             }
+             const opsi = {
+              maintainAspectRatio: false,
+              responsive: true,
+              legend: {
+                display: false
+              },
+              scales: {
+                xAxes: [{
+                  gridLines: {
+                    display: false
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                      callback: function(value, index, values) {
+                          return formatIDR(value);
+                      }
+                  },
+                  gridLines: {
+                    display: false
+                  }
+                }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, chart){
+                          const datasetLabel = chart.datasets[tooltipItem.datasetIndex].label ;
+                          return datasetLabel + ': ' + formatIDR(tooltipItem.yLabel);
+                      }
+                  }
+              }
+             }
+
+              const ChartPendaptan = new Chart(pendapatan,{
+                type:'bar',
+                data:data_income,
+                options:opsi
+              });
+            }
+          });
+        }
+        $("#filter-income").click(getDataIncomeWithMonth);
+        getDataIncomeWithMonth();
+    });
+
+
+
+
+</script>
+
 @endsection
