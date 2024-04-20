@@ -204,6 +204,7 @@
 
 <script src="{{asset('theme/plugins/chart.js/Chart.min.js')}}"></script>
 <script>
+
   function formatIDR(angka) {
       const strAngka = angka.toString().replace(/[^0-9]/g,'');
       if (!strAngka) return '';
@@ -224,6 +225,9 @@
             data:{month},
             dataType: 'json',
             success: function(data) {
+              if(data.goods_in_this_month+data.goods_out_this_month+data.total_stock_this_month === 0){
+                return false;
+              }
               $("input[name='month']").val(data.month);
               const chartstok_barang =  document.getElementById('stok-barang').getContext('2d'); 
               const data_stok = {
@@ -290,6 +294,9 @@
             data:{month},
             dataType: 'json',
             success: function(data) {
+              if(data.pengeluaran+data.pendapatan+data.total === 0){
+                return false;
+              }
               $("input[name='month-income']").val(data.bulan);
               const pendapatan =  document.getElementById('pendapatan').getContext('2d'); 
               const data_income = {
