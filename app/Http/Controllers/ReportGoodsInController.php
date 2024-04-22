@@ -47,4 +47,5 @@ class ReportGoodsInController extends Controller
             -> make(true);
         }
     }
+
 }

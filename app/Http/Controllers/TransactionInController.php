@@ -52,7 +52,7 @@ class TransactionInController extends Controller
 
     public function save(Request $request):JsonResponse
     {
-        $data = [ 
+        $data = [
             'user_id'=>$request->user_id,
             'supplier_id'=>$request->supplier_id,
             'date_received'=>$request->date_received,
@@ -61,6 +61,9 @@ class TransactionInController extends Controller
             'item_id'=>$request->item_id
         ];
         GoodsIn::create($data);
+        $barang = Item::find($request->item_id);
+        $barang -> active = "true";
+        $barang -> save();
         return response() -> json([
             "message"=>"Data Berhasil Di Simpan"
         ]) -> setStatusCode(200);
@@ -116,5 +119,36 @@ class TransactionInController extends Controller
         return response()->json([
             "message"=>"Data Berhasil Di Hapus"
         ]) -> setStatusCode(200);
+    }
+
+    public function listIn(Request $request):JsonResponse
+    {
+        $items = Item::with('category','unit','brand')->where('active','true')->latest()->get();
+        if($request -> ajax()){
+            return DataTables::of($items)
+            ->addColumn('img',function($data){
+                if(empty($data->image)){
+                    return "<img src='".asset('default.png')."' style='width:100%;max-width:240px;aspect-ratio:1;object-fit:cover;padding:1px;border:1px solid #ddd'/>";
+                }
+                return "<img src='".asset('storage/barang/'.$data->image)."' style='width:100%;max-width:240px;aspect-ratio:1;object-fit:cover;padding:1px;border:1px solid #ddd'/>";
+            })
+            -> addColumn('category_name',function($data){
+                return $data->category->name;
+            })
+            -> addColumn('unit_name',function($data){
+                return $data->unit->name;
+            })
+            -> addColumn('brand_name',function($data){
+                return $data -> brand -> name;
+            })
+            -> addColumn('tindakan',function($data){
+                    $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>Ubah</button>";
+                    $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>Hapus</button>";
+                    return $button;
+            })
+            ->rawColumns(['img','tindakan'])
+            -> make(true);
+
+        }
     }
 }

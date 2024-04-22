@@ -65,7 +65,7 @@
             </div>
           </div>
 
-          
+
 
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -142,6 +142,20 @@
             </div>
           </div>
 
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow" style="color:white !important;">
+              <div class="inner">
+                <h3 id="total-pendapatan-bulan-ini">Rp. 0</h3>
+                <p class="font-weight-bold">Total Pendapatan</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-cash"></i>
+              </div>
+              <a href="" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
   </div>
 </div>
 
@@ -173,7 +187,7 @@
       </div>
     </div>
     <div class="col-sm-12 col-lg-6">
-      
+
       <div class="card">
         <div class="card-header">
             <h1 class="card-title text-lg font-weight-bold">PENDAPAN DAN PENGELUARAN BULAN INI</h1>
@@ -200,7 +214,7 @@
 
     </div>
   </div>
-</div> 
+</div>
 
 <script src="{{asset('theme/plugins/chart.js/Chart.min.js')}}"></script>
 <script>
@@ -212,13 +226,13 @@
       let intPart = parts[0];
       const decPart = parts.length > 1 ? '.' + parts[1] : '';
       intPart = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-      const result = 'RP.' + ''+intPart+decPart;
+      const result = 'RP. ' + ''+intPart+decPart;
       return result;
   }
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
-        function getDataWithMonth(){
+    function getDataWithMonth(){
           const month = $("input[name='month']").val();
           $.ajax({
             url: `{{route('laporan.stok.grafik')}}`,
@@ -229,7 +243,7 @@
                 return false;
               }
               $("input[name='month']").val(data.month);
-              const chartstok_barang =  document.getElementById('stok-barang').getContext('2d'); 
+              const chartstok_barang =  document.getElementById('stok-barang').getContext('2d');
               const data_stok = {
               labels:['Barang Masuk', 'Barang Keluar', 'Total Stok'],
               datasets: [{
@@ -247,7 +261,7 @@
                   ],
                   borderWidth: 1
                }]
-              
+
              }
              const opsi = {
               maintainAspectRatio: false,
@@ -297,8 +311,9 @@
               if(data.pengeluaran+data.pendapatan+data.total === 0){
                 return false;
               }
+              $("#total-pendapatan-bulan-ini").text(formatIDR(data.total));
               $("input[name='month-income']").val(data.bulan);
-              const pendapatan =  document.getElementById('pendapatan').getContext('2d'); 
+              const pendapatan =  document.getElementById('pendapatan').getContext('2d');
               const data_income = {
               labels:['Pengeluaran','Pendapatan', 'Total Pendapatan'],
               datasets: [{
@@ -316,7 +331,7 @@
                   ],
                   borderWidth: 1
                }]
-              
+
              }
              const opsi = {
               maintainAspectRatio: false,

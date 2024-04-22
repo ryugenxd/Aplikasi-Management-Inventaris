@@ -10,7 +10,7 @@ use App\Models\GoodsOut;
 class ReportFinancialController extends Controller
 {
     public function income(Request $request): JsonResponse
-    {  
+    {
         if($request->has('month') && !empty($request->month) ){
             $month = $request->month;
             $currentMonth = preg_split("/[-\s]/", $month)[1];
@@ -26,15 +26,15 @@ class ReportFinancialController extends Controller
             $price = intval(preg_replace("/[^0-9]/", "", $goodsIn->item->price));
             return $price * $goodsIn -> quantity;
         });
-        
+
         $totalIncomePengeluaran = GoodsOut::whereMonth('date_out', $currentMonth)
         ->whereYear('date_out', $currentYear)->with('item')->get()->sum(function ($goodsOut) {
             $price = intval(preg_replace("/[^0-9]/", "", $goodsOut->item->price));
             return $price * $goodsOut->quantity;
         });
 
-        $totalIncome = $totalIncomeMasukan - $totalIncomePengeluaran;
-
+        $totalIncome =  max(0,floor($totalIncomePengeluaran - $totalIncomeMasukan));
+        // dd($totalIncome);
         return response() -> json([
             'bulan'=>$currentYear.'-'.$currentMonth,
             "pendapatan" => $totalIncomeMasukan,

@@ -50,19 +50,19 @@ class ItemController extends Controller
             })
             ->rawColumns(['img','tindakan'])
             -> make(true);
-           
+
         }
     }
 
     public function save(Request $request): JsonResponse
     {
-        $data = [ 
+        $data = [
             'name'=>$request->name,
             'code'=>$request->code,
             'price'=>$request->price,
             'category_id'=>$request->category_id,
             'brand_id'=>$request->brand_id,
-            'unit_id'=>$request->unit_id
+            'unit_id'=>$request->unit_id,
         ];
         if ($request->file('image') != null) {
             $image = $request->file('image');
@@ -102,7 +102,7 @@ class ItemController extends Controller
     {
         $id = $request -> id;
         $item = Item::find($id);
-        $data = [ 
+        $data = [
             'name'=>$request->name,
             'code'=>$request->code,
             'price'=>$request->price,

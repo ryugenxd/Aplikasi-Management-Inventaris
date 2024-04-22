@@ -16,8 +16,9 @@ class TransactionOutController extends Controller
 {
     public function index():View
     {
+        $in_status = Item::where('active','true')->count();
         $customers = Customer::all();
-        return view('admin.master.transaksi.keluar',compact('customers'));
+        return view('admin.master.transaksi.keluar',compact('customers','in_status'));
     }
 
     public function list(Request $request):JsonResponse

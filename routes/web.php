@@ -47,7 +47,7 @@ Route::middleware(['auth'])-> group(function(){
         Route::delete('/barang/jenis/delete',[CategoryController::class,'delete'])->name('barang.jenis.delete');
     });
         // satuan barang
-    
+
     Route::get('/barang/satuan',[UnitController::class,'index'])->name('barang.satuan');
     Route::get('/barang/satuan/list',[UnitController::class,'list'])->name('barang.satuan.list');
     Route::middleware(['staff.middleware'])->group(function(){
@@ -57,7 +57,7 @@ Route::middleware(['auth'])-> group(function(){
         Route::delete('/barang/satuan/delete',[UnitController::class,'delete'])->name('barang.satuan.delete');
     });
         // merk barang
-    
+
     Route::get('/barang/merk',[BrandController::class,'index'])->name('barang.merk');
     Route::get('/barang/merk/list',[BrandController::class,'list'])->name('barang.merk.list');
     Route::middleware(['staff.middleware'])->group(function(){
@@ -66,7 +66,7 @@ Route::middleware(['auth'])-> group(function(){
         Route::put('/barang/merk/update',[BrandController::class,'update'])->name('barang.merk.update');
         Route::delete('/barang/merk/delete',[BrandController::class,'delete'])->name('barang.merk.delete');
     });
-    
+
         // customer (izin untuk staff hanya read)
     Route::get('/customer',[CustomerController::class,'index'])->name('customer');
     Route::get('/customer/list',[CustomerController::class,'list'])->name('customer.list');
@@ -93,6 +93,7 @@ Route::middleware(['auth'])-> group(function(){
     Route::post('/transaksi/masuk/detail',[TransactionInController::class,'detail'])->name('transaksi.masuk.detail');
     Route::put('/transaksi/masuk/update',[TransactionInController::class,'update'])->name('transaksi.masuk.update');
     Route::delete('/transaksi/masuk/delete',[TransactionInController::class,'delete'])->name('transaksi.masuk.delete');
+    Route::get('/barang/list/in',[TransactionInController::class,'listIn'])->name('barang.list.in');
         // Transaksi keluar
     Route::get('/transaksi/keluar',[TransactionOutController::class,'index'])->name('transaksi.keluar');
     Route::get('/transaksi/keluar/list',[TransactionOutController::class,'list'])->name('transaksi.keluar.list');
@@ -106,7 +107,7 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('/laporan/masuk/list',[ReportGoodsInController::class,'list'])->name('laporan.masuk.list');
 
 
-  
+
     Route::get('/laporan/keluar',[ReportGoodsOutController::class,'index'])->name('laporan.keluar');
     Route::get('/laporan/keluar/list',[ReportGoodsOutController::class,'list'])->name('laporan.keluar.list');
 
@@ -125,7 +126,7 @@ Route::middleware(['auth'])-> group(function(){
         Route::put('/pengaturan/pengguna/update',[StaffController::class,'update'])->name('settings.staff.update');
         Route::delete('/pengaturan/pengguna/delete',[StaffController::class,'delete'])->name('settings.staff.delete');
     });
-    
+
     // Route::get('/pengaturan/web',[WebSettingController::class,'index'])->name('settings.web');
     // Route::get('/pengaturan/web/detail',[WebSettingController::class,'detail'])->name('settings.web.detail');
     // Route::post('/pengaturan/web/detail/role',[WebSettingController::class,'detailRole'])->name('settings.web.detail.role');

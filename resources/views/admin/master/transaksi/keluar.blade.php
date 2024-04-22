@@ -8,9 +8,11 @@
             <div class="card w-100">
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus m-1"></i> Tambah Data </button>
+                        <button class="btn {{$in_status!=0?'btn-success':'btn-danger'}}" type="button"  data-toggle="modal" {{$in_status!=0?'data-target="#TambahData"':'data-target="alert"'}} id="modal-button"><i class="fas fa-plus m-1"></i> Tambah Data </button>
                     </div>
                 </div>
+
+
 
                 <!-- Modal Barang -->
             <div class="modal fade" id="modal-barang" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -55,7 +57,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Buat Transaksi Masuk</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">Buat Transaksi Keluar</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"  >&times;</span>
                             </button>
@@ -155,14 +157,14 @@
         }
     });
 
-    
+
 
     function load(){
         $('#data-barang').DataTable({
             lengthChange: true,
             processing:true,
             serverSide:true,
-            ajax:`{{route('barang.list')}}`,
+            ajax:`{{route('barang.list.in')}}`,
             columns:[
                 {
                     "data":null,"sortable":false,
@@ -213,7 +215,7 @@
 
 
 
-    
+
     $(document).ready(function(){
         load();
 
@@ -257,10 +259,10 @@
                 $("input[name='jenis_barang']").val(data.category_name);
             }
         });
-        
+
     }
 
-    
+
 
 
     function simpan(){
@@ -317,8 +319,8 @@
                     });
                 }
             }
-                
-        })     
+
+        })
     }
 
 
@@ -357,9 +359,9 @@
                 error:function(err){
                     console.log(err);
             },
-        })     
+        })
     }
-    
+
     $(document).ready(function(){
         $('#data-tabel').DataTable({
             lengthChange: true,
@@ -420,6 +422,19 @@
         });
 
         $("#modal-button").on("click",function(){
+            if($(this).attr('data-target')==='alert'){
+                return Swal.fire({
+                        position: "center",
+                        icon: "warning",
+                        title: "Oops...",
+                        text:"Barang Stok Masuk Kosong",
+                        showConfirmButton: false,
+                        timer: 1900
+                });
+            }
+
+            $('#TambahData').modal('show');
+
             id = new Date().getTime();
             $("input[name='kode']").val("BRGMSK-"+id);
             $("input[name='id']").val(null);
@@ -462,7 +477,7 @@
                 $("input[name='jumlah']").val(data.quantity);
             }
         });
-        
+
     });
 
     $(document).on("click",".hapus",function(){
@@ -504,7 +519,7 @@
             }
         });
 
-        
+
     });
 
 

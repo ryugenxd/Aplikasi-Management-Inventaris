@@ -14,13 +14,15 @@ class Item extends Model
     protected $fillable = [
         'name','image','code',
         'price','quantity','category_id','brand_id',
-        'unit_id'
+        'unit_id',
+        'active'
     ];
 
     public function category(): BelongsTo
     {
         return $this -> belongsTo(Category::class);
     }
+
 
     public function goodsIns():HasMany
     {
@@ -42,5 +44,5 @@ class Item extends Model
         return $this -> belongsTo(Brand::class);
     }
 
-   
+
 }
