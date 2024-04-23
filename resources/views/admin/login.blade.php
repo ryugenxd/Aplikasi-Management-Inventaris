@@ -64,7 +64,7 @@
           </div>
         </div> -->
         <div class="social-auth-links text-center mt-2 mb-3">
-          <button type="submit" class="btn btn-primary btn-block font-weight-bold">Masuk</button>
+          <button type="submit" class="btn btn-primary btn-block font-weight-bold">{{ __("messages.login") }}</button>
         </div>
       </form>
 
@@ -99,7 +99,7 @@ $(document).ready(function(){
           position: "start",
           icon: "warning",
           title:"Oops...",
-          text:"Username Wajib Diisi !",
+          text:"{{ __('validation.required', ['attributes' => 'username']) }",
           showConfirmButton: false,
           timer: 1500
         });
@@ -108,7 +108,7 @@ $(document).ready(function(){
           position: "start",
           icon: "warning",
           title:"Oops...",
-          text:"Password Wajib Diisi !",
+          text:"{{ __('validation.required', ['attributes' => 'password']) }}",
           showConfirmButton: false,
           timer: 1500
         });
@@ -127,8 +127,8 @@ $(document).ready(function(){
               Swal.fire({
                 position: "start",
                 icon: "success",
-                title:"Login Berhasil!",
-                text:"Anda akan di arahkan ke Dashboard",
+                title:"{{ __('auth.success') }}",
+                text:"{{ __('messages.redirect-to', ['dest' => 'dashboard']) }}",
                 showConfirmButton: false,
                 timer: 1500,
               }).then(function(){
@@ -139,8 +139,8 @@ $(document).ready(function(){
               Swal.fire({
                 position: "start",
                 icon: "error",
-                title:"Login Gagal!",
-                text:"Username Atau Password Salah",
+                title:"{{ __('auth.failed') }}!",
+                text:"{{ __('auth.failed-message') }}",
                 showConfirmButton: false,
                 timer: 1500
               });
@@ -153,8 +153,8 @@ $(document).ready(function(){
             Swal.fire({
                 position: "center",
                 icon: "error",
-                title:"Opps!",
-                text:"Server Error!",
+                title:"{{ __('messages.oops') }}",
+                text:"{{ __('messages.server-error') }}",
                 showConfirmButton: false,
                 timer: 1500
             });

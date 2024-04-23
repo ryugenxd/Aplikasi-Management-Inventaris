@@ -11,12 +11,12 @@
               <div class="inner">
                 <h3>{{$product_count}}</h3>
 
-                <p class="font-weight-bold">Barang</p>
+                <p class="font-weight-bold">{{ __("goods") }}</p>
               </div>
               <div class="icon">
                 <i class="fas fa-boxes"></i>
               </div>
-              <a href="{{route('barang')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -31,7 +31,7 @@
               <div class="icon">
                 <i class="ion ion-ios-pricetags"></i>
               </div>
-              <a href="{{route('barang.jenis')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.jenis')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -46,7 +46,7 @@
               <div class="icon">
                 <i class="ion ion-cube"></i>
               </div>
-              <a href="{{route('barang.satuan')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.satuan')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
               <div class="icon">
                 <i class="ion ion-ios-pricetag"></i>
               </div>
-              <a href="{{route('barang.merk')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.merk')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -78,7 +78,7 @@
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
               </div>
-              <a href="{{route('transaksi.masuk')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('transaksi.masuk')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -93,7 +93,7 @@
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
               </div>
-              <a href="{{route('transaksi.keluar')}}" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('transaksi.keluar')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -108,7 +108,7 @@
               <div class="icon">
                 <i class="ion ion-android-person"></i>
               </div>
-              <a href="{{route('customer')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('customer')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -123,7 +123,7 @@
               <div class="icon">
                 <i class="fas fa-shipping-fast"></i>
               </div>
-              <a href="{{route('customer')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('customer')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -138,7 +138,7 @@
               <div class="icon">
                 <i class="ion ion-android-person"></i>
               </div>
-              <a href="{{route('settings.users')}}" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('settings.users')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -152,7 +152,7 @@
               <div class="icon">
                 <i class="ion ion-cash"></i>
               </div>
-              <a href="" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
