@@ -20,11 +20,12 @@ use App\Http\Controllers\AdminatorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportFinancialController;
 
-Route::get('/',[LoginController::class,'index'])->name('login');
-Route::post('/',[LoginController::class,'auth'])->name('login.auth');
+Route::middleware(["localization"])-> group(function(){
+    Route::get('/',[LoginController::class,'index'])->name('login');
+    Route::post('/',[LoginController::class,'auth'])->name('login.auth');
+});
 
-Route::middleware(['auth'])-> group(function(){
-
+Route::middleware(['auth', "localization"])-> group(function(){
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
     // barang

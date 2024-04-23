@@ -15,12 +15,12 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-header">Menu</li>
+        <li class="nav-header">{{ __("menu") }}</li>
          <li class="nav-item">
             <a href="{{route('dashboard')}}" class="nav-link text-white">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+              {{ __("dashboard") }}
               </p>
             </a>
           </li>
@@ -29,7 +29,7 @@
             <a href="javascript:void(0)" class="nav-link text-white">
               <i class="nav-icon fas fa-box"></i>
               <p>
-                Master Barang
+              {{ __("master of goods") }}
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -37,25 +37,25 @@
               <li class="nav-item">
                 <a href="{{route('barang.jenis')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Jenis</p>
+                  <p>{{ __("category") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('barang.satuan')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Satuan</p>
+                  <p>{{ __("unit") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('barang.merk')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Merk</p>
+                  <p>{{ __("brand") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('barang')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Barang</p>
+                  <p>{{ __("goods") }}</p>
                 </a>
               </li>
             </ul>
@@ -64,7 +64,7 @@
             <a href="{{route('customer')}}" class="nav-link text-white">
               <i class="nav-icon far fa-user"></i>
               <p>
-                Customer
+              {{ __("customer") }}
               </p>
             </a>
           </li>
@@ -72,7 +72,7 @@
             <a href="{{route('supplier')}}" class="nav-link text-white">
               <i class="nav-icon fas fa-shipping-fast"></i>
               <p>
-                Supplier
+                {{ __("supplier") }}
               </p>
             </a>
           </li>
@@ -80,7 +80,7 @@
             <a href="javascript:void(0)" class="nav-link text-white">
               <i class="nav-icon fas fa-exchange-alt"></i>
               <p>
-                Transaksi
+              {{ __("transaction") }}
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -88,13 +88,13 @@
               <li class="nav-item">
                 <a href="{{route('transaksi.masuk')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Masuk</p>
+                  <p>{{ __("incoming transaction") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('transaksi.keluar')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Keluar</p>
+                  <p>{{ __("outbound transaction") }}</p>
                 </a>
               </li>
             </ul>
@@ -103,7 +103,7 @@
             <a href="javascript:void(0)" class="nav-link text-white">
               <i class="nav-icon fas fa-print"></i>
               <p>
-                Laporan
+              {{ __("report") }}
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -111,29 +111,29 @@
               <li class="nav-item">
                 <a href="{{route('laporan.masuk')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Lap Barang Masuk</p>
+                  <p>{{ __("incoming goods report") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('laporan.keluar')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Lap Barang Keluar</p>
+                  <p>{{ __("outgoing goods report") }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('laporan.stok')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Lap Stok Barang</p>
+                  <p>{{ __("stock report") }}</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-header">LAINNYA</li>
+          <li class="nav-header">{{ __("others") }}</li>
           <li class="nav-item">
             <a href="javascript:void(0)" class="nav-link text-white">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Pengaturan
+              {{ __("setting") }}
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -142,7 +142,7 @@
               <li class="nav-item">
                 <a href="{{route('settings.users')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Pengguna</p>
+                  <p>{{ __("user") }}</p>
                 </a>
               </li>
             @endif
@@ -155,7 +155,7 @@
               <li class="nav-item">
                 <a href="{{route('settings.profile')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>Profile</p>
+                  <p>{{ __("profile") }}</p>
                 </a>
               </li>
             </ul>
@@ -164,7 +164,7 @@
               <a href="{{route('login.delete')}}" class="nav-link text-white">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>
-                  Log Out
+                {{ __("messages.logout") }}
                 </p>
               </a>
           </li>
