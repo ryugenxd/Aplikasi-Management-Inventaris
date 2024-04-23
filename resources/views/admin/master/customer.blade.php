@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Customer')
+@section('title',  __("customer") )
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                         @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">Tambah Data</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{__("add customers")}}</button>
                         @endif
                     </div>
                 </div>
@@ -20,29 +20,29 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Tambah Customer</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{__('adding customer data')}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" onclick="clear()" >&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group mb-3">
-                                <label for="name">Nama</label>
+                                <label for="name">{{__('name')}}</label>
                                 <input type="text" class="form-control" id="name" autocomplete="off">
                                 <input type="hidden" name="id" id="id">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="phone_number">Nomor Hp</label>
+                                <label for="phone_number">{{__('phone number')}}</label>
                                 <input type="text" class="form-control" id="phone_number" autocomplete="off">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="address">Alamat</label>
+                                <label for="address">{{__('address')}}</label>
                                 <textarea class="form-control" id="address"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{__('cancel')}}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{__('save')}}</button>
                         </div>
                         </div>
                     </div>
@@ -54,11 +54,11 @@
                             <thead>
                                 <tr>
                                     <th class="border-bottom-0" width="4%">No</th>
-                                    <th class="border-bottom-0">Nama</th>
-                                    <th class="border-bottom-0">Nomor HP</th>
-                                    <th class="border-bottom-0">Alamat</th>
+                                    <th class="border-bottom-0">{{__('name')}}</th>
+                                    <th class="border-bottom-0">{{__('phone number')}}</th>
+                                    <th class="border-bottom-0">{{__('address')}}</th>
                                     @if(Auth::user()->role->name != 'staff')
-                                    <th class="border-bottom-0" width="1%">Tindakan</th>
+                                    <th class="border-bottom-0" width="1%">{{__('action')}}</th>
                                     @endif
                                 </tr>
                             </thead>
@@ -133,7 +133,7 @@
                 error:function(err){
                     console.log(err);
                 },
-                
+
             });
     }
 
@@ -162,20 +162,20 @@
                     $("#phone_number").val(null);
                     $("#address").val(null);
                     $('#data-tabel').DataTable().ajax.reload();
-                    $('#simpan').text('Simpan');
+                    $('#simpan').text("{{__('save')}}");
                 },
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-                
+
             });
     }
-    
+
     $(document).ready(function(){
         isi();
 
         $('#simpan').on('click',function(){
-            if($(this).text() === 'Simpan Perubahan'){
+            if($(this).text() === "{{__('update')}}"){
                 ubah();
             }else{
                 simpan();
@@ -183,11 +183,11 @@
         });
 
         $("#modal-button").on("click",function(){
-            $("#TambahDataModalLabel").text("Tambah Data Customer");
+            $("#TambahDataModalLabel").text("{{__('adding customer data')}}");
             $("#name").val(null);
             $("#phone_number").val(null);
             $("#address").val(null);
-            $("#simpan").text("Simpan");
+            $("#simpan").text("{{__('save')}}");
         });
 
 
@@ -198,8 +198,8 @@
     $(document).on("click",".ubah",function(){
         let id = $(this).attr('id');
         $("#modal-button").click();
-        $("#TambahDataModalLabel").text("Ubah Data Customer");
-        $("#simpan").text("Simpan Perubahan");
+        $("#TambahDataModalLabel").text("{{__('changing customer data')}}");
+        $("#simpan").text("{{__('update')}}");
         $.ajax({
             url:"{{route('customer.detail')}}",
             type:"post",
@@ -214,7 +214,7 @@
                 $("#address").val(data.address);
             }
         });
-        
+
     });
 
     $(document).on("click",".hapus",function(){
@@ -227,12 +227,12 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Anda Yakin ?",
-            text: "Data Ini Akan Di Hapus",
+            title: "{{__('you are sure')}} ?",
+            text: "{{__('this data will be deleted')}}",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonText: "Ya,Hapus",
-            cancelButtonText: "Tidak, Kembali!",
+            confirmButtonText: "{{__('yes, delete')}}",
+            cancelButtonText: "{{__('no, cancel')}}!",
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
@@ -257,7 +257,7 @@
             }
         });
 
-        
+
     });
 </script>
 @endsection

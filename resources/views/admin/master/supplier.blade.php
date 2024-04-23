@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Supplier')
+@section('title',__('supplier'))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">Tambah Data</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{__('add suppliers')}}</button>
                     @endif
                     </div>
                 </div>
@@ -20,31 +20,31 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Tambah Data Supplier</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{__('adding supplier data')}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" onclick="clear()" >&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group mb-3">
-                                <label for="name">Nama</label>
+                                <label for="name">{{__('name')}}</label>
                                 <input type="text" class="form-control" id="name" autocomplete="off">
                                 <input type="hidden" name="id" id="id">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="phone_number">Nomor Hp</label>
+                                <label for="phone_number">{{__('phone number')}}</label>
                                 <input type="text" class="form-control" id="phone_number" autocomplete="off">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="address">Alamat</label>
+                                <label for="address">{{__('address')}}</label>
                                 <textarea class="form-control" id="address"></textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="email">Email</label>
+                                <label for="email">{{__('email')}}</label>
                                 <input type="email" class="form-control" id="email" autocomplete="off">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="website">Website</label>
+                                <label for="website">{{__('website')}}</label>
                                 <textarea class="form-control" id="website"></textarea>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                 error:function(err){
                     console.log(err);
                 },
-                
+
             });
     }
 
@@ -200,20 +200,20 @@
                     $("#email").val(null);
                     $("#website").val(null);
                     $('#data-tabel').DataTable().ajax.reload();
-                    $('#simpan').text('Simpan');
+                    $('#simpan').text("{{__('save')}}");
                 },
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-                
+
             });
     }
-    
+
     $(document).ready(function(){
         isi();
 
         $('#simpan').on('click',function(){
-            if($(this).text() === 'Simpan Perubahan'){
+            if($(this).text() === "{{__('update')}}"){
                 ubah();
             }else{
                 simpan();
@@ -221,13 +221,13 @@
         });
 
         $("#modal-button").on("click",function(){
-            $("#TambahDataModalLabel").text("Tambah Data  Supplier");
+            $("#TambahDataModalLabel").text("{{__('adding supplier data')}}");
             $("#name").val(null);
             $("#phone_number").val(null);
             $("#address").val(null);
             $("#email").val(null);
             $("#website").val(null);
-            $("#simpan").text("Simpan");
+            $("#simpan").text("{{__('save')}}");
         });
 
 
@@ -238,8 +238,8 @@
     $(document).on("click",".ubah",function(){
         let id = $(this).attr('id');
         $("#modal-button").click();
-        $("#TambahDataModalLabel").text("Ubah Data  Supplier");
-        $("#simpan").text("Simpan Perubahan");
+        $("#TambahDataModalLabel").text("{{__('changing supplier data')}}");
+        $("#simpan").text("{{__('update')}}");
         $.ajax({
             url:"{{route('supplier.detail')}}",
             type:"post",
@@ -256,7 +256,7 @@
                 $("#email").val(data.email);
             }
         });
-        
+
     });
 
     $(document).on("click",".hapus",function(){
@@ -269,12 +269,12 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Anda Yakin ?",
-            text: "Data Ini Akan Di Hapus",
+            title: "{{__('you are sure')}} ?",
+            text: "{{__('this data will be deleted')}}",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonText: "Ya,Hapus",
-            cancelButtonText: "Tidak, Kembali!",
+            confirmButtonText: "{{__('yes, delete')}}",
+            cancelButtonText: "{{__('no, cancel')}}!",
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
@@ -299,7 +299,7 @@
             }
         });
 
-        
+
     });
 </script>
 @endsection
