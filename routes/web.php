@@ -27,15 +27,20 @@ Route::middleware(['auth'])-> group(function(){
 
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
-    Route::get('/barang',[ItemController::class,'index'])->name('barang');
-    Route::post('/barang/code',[ItemController::class,'detailByCode'])->name('barang.code');
-    Route::get('/barang/list',[ItemController::class,'list'])->name('barang.list');
-    Route::middleware(['staff.middleware'])->group(function(){
-        Route::post('/barang/save',[ItemController::class,'save'])->name('barang.save');
-        Route::post('/barang/detail',[ItemController::class,'detail'])->name('barang.detail');
-        Route::post('/barang/update',[ItemController::class,'update'])->name('barang.update');
-        Route::delete('/barang/delete',[ItemController::class,'delete'])->name('barang.delete');
+    Route::controller(ItemController::class)->prefix("barang")->group(function(){
+        Route::get('/','index')->name('barang');
+        Route::post('/kode','detailByCode')->name('barang.code');
+        Route::get('/daftar-barang','list')->name('barang.list');
+
+        Route::middleware(['staff.middleware'])->group(function(){
+            Route::post('/barang/simpan','save')->name('barang.save');
+            Route::post('/barang/info','detail')->name('barang.detail');
+            Route::post('/barang/ubah','update')->name('barang.update');
+            Route::delete('/barang/hapus','delete')->name('barang.delete');
+        });
     });
+
+
 
         // jenis barang
     Route::get('/barang/jenis',[CategoryController::class,'index'])->name('barang.jenis');
