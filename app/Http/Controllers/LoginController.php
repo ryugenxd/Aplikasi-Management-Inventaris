@@ -28,7 +28,7 @@ class LoginController extends Controller
             ->setStatusCode(401);
         }
         return response()->json([
-            "route"=>"",
+            "route"=>route('dashboard'),
             "success"=>true,
             "message"=>"Login Berhasil !"
         ])
