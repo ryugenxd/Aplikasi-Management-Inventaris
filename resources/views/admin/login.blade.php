@@ -98,8 +98,8 @@ $(document).ready(function(){
         Swal.fire({
           position: "start",
           icon: "warning",
-          title:"Oops...",
-          text:"{{ __('validation.required', ['attributes' => 'username']) }",
+          title:"{{ __("messages.oops") }}",
+          text:"{{ __('validation.required', ['attribute' => 'username']) }}",
           showConfirmButton: false,
           timer: 1500
         });
@@ -107,8 +107,8 @@ $(document).ready(function(){
         Swal.fire({
           position: "start",
           icon: "warning",
-          title:"Oops...",
-          text:"{{ __('validation.required', ['attributes' => 'password']) }}",
+          title:"{{ __("messages.oops") }}",
+          text:"{{ __('validation.required', ['attribute' => 'password']) }}",
           showConfirmButton: false,
           timer: 1500
         });

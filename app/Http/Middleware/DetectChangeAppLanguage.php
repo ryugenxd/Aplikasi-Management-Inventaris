@@ -16,8 +16,32 @@ class DetectChangeAppLanguage
      */
     public function handle(Request $request, Closure $next): Response
     {
+        $available_languages = ["id", "en"];
+
         if ($request->filled("lang")) {
-          App::setLocale($request->input("lang"));
+          $lang = $request->input("lang");
+
+          if (in_array($lang, $available_languages)) {
+            $request->session()->put("lang", $lang);
+            App::setLocale($lang);
+          }
+          if (in_array($lang, $available_languages)) {
+            $request->session()->put("lang", $lang);
+            App::setLocale($lang);
+          }
+        }
+        
+        if ($request->session()->has("lang")) {
+          $lang = $request->session()->get("lang", "en");
+
+          if (in_array($lang, $available_languages)) {
+            $request->session()->put("lang", $lang);
+            App::setLocale($lang);
+          }
+          if (in_array($lang, $available_languages)) {
+            $request->session()->put("lang", $lang);
+            App::setLocale($lang);
+          }
         }
         
         return $next($request);

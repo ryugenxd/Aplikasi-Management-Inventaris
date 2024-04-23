@@ -14,7 +14,7 @@ return [
     */
 
     'failed' => 'Gagal masuk!',
-    'failed-message' => 'Gagal masuk cek username dan kata sandi anda..',
+    'failed-message' => 'Gagal masuk cek username dan kata sandi anda.',
     'success' => 'Berhasil masuk.',
     'password' => 'Mata sandi salah.',
     'throttle' => 'Terlalu banyak percobaan gagal, coba lagi setelah beberapa saat.',
