@@ -11,12 +11,12 @@
               <div class="inner">
                 <h3>{{$product_count}}</h3>
 
-                <p class="font-weight-bold">Barang</p>
+                <p class="font-weight-bold">{{ __("goods") }}</p>
               </div>
               <div class="icon">
                 <i class="fas fa-boxes"></i>
               </div>
-              <a href="{{route('barang')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -26,12 +26,12 @@
               <div class="inner">
                 <h3>{{$category_count}}</h3>
 
-                <p class="font-weight-bold">Jenis Barang</p>
+                <p class="font-weight-bold">{{ __("goods category") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-ios-pricetags"></i>
               </div>
-              <a href="{{route('barang.jenis')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.jenis')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -41,12 +41,12 @@
               <div class="inner">
                 <h3>{{$unit_count}}</h3>
 
-                <p class="font-weight-bold">Satuan Barang</p>
+                <p class="font-weight-bold">{{ __("unit of goods") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-cube"></i>
               </div>
-              <a href="{{route('barang.satuan')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.satuan')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -56,12 +56,12 @@
               <div class="inner">
                 <h3>{{$brand_count}}</h3>
 
-                <p class="font-weight-bold">Merk Barang</p>
+                <p class="font-weight-bold">{{ __("brand of goods") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-ios-pricetag"></i>
               </div>
-              <a href="{{route('barang.merk')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('barang.merk')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -73,12 +73,12 @@
               <div class="inner">
                 <h3>{{$goodsin}}</h3>
 
-                <p class="font-weight-bold">Transaksi Masuk</p>
+                <p class="font-weight-bold">{{ __("incoming transaction") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
               </div>
-              <a href="{{route('transaksi.masuk')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('transaksi.masuk')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -88,12 +88,12 @@
               <div class="inner" style="color:white !important;">
                 <h3>{{$goodsout}}</h3>
 
-                <p class="font-weight-bold">Transaksi Keluar</p>
+                <p class="font-weight-bold">{{ __("outbound transaction") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-arrow-swap"></i>
               </div>
-              <a href="{{route('transaksi.keluar')}}" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('transaksi.keluar')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -103,12 +103,12 @@
               <div class="inner">
                 <h3>{{$customer}}</h3>
 
-                <p class="font-weight-bold">Customer</p>
+                <p class="font-weight-bold">{{ __("customer") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-android-person"></i>
               </div>
-              <a href="{{route('customer')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('customer')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -118,12 +118,12 @@
               <div class="inner">
                 <h3>{{$supplier}}</h3>
 
-                <p class="font-weight-bold">Supplier</p>
+                <p class="font-weight-bold">{{ __("supplier") }}</p>
               </div>
               <div class="icon">
                 <i class="fas fa-shipping-fast"></i>
               </div>
-              <a href="{{route('customer')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('customer')}}" class="small-box-footer">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -133,12 +133,12 @@
               <div class="inner">
                 <h3>{{$staffCount}}</h3>
 
-                <p class="font-weight-bold">Petugas</p>
+                <p class="font-weight-bold">{{ __("employee") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-android-person"></i>
               </div>
-              <a href="{{route('settings.users')}}" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('settings.users')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -147,12 +147,12 @@
             <div class="small-box bg-yellow" style="color:white !important;">
               <div class="inner">
                 <h3 id="total-pendapatan-bulan-ini">Rp. 0</h3>
-                <p class="font-weight-bold">Total Pendapatan</p>
+                <p class="font-weight-bold">{{ __("total income") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-cash"></i>
               </div>
-              <a href="" class="small-box-footer" style="color:white !important;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -164,16 +164,16 @@
     <div class="col-sm-12 col-lg-6">
       <div class="card">
         <div class="card-header">
-          <h1 class="card-title text-lg font-weight-bold">TRANSAKSI BARANG BULAN INI</h1>
+          <h1 class="card-title text-lg font-weight-bold text-uppercase">{{ __("goods transactions on this month") }}</h1>
         </div>
         <div class="card-body">
           <div class="row  d-flex justify-content-start align-items-center">
             <div class="col-6">
-              <label for="month" class="form-label">Pilih Bulan</label>
+              <label for="month" class="form-label text-capitalize">{{ __("select month") }}</label>
               <div class="input-group mb-3">
                 <div class="w-100 mb-3 d-flex align-items-center py-3">
                   <input type="month" name="month" id="month" class="form-control w-50">
-                  <button id="filter" class="btn btn-primary mx-2"><i class="fas fa-filter"></i>Filter</button>
+                  <button id="filter" class="btn btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
                 </div>
               </div>
             </div>
@@ -190,16 +190,16 @@
 
       <div class="card">
         <div class="card-header">
-            <h1 class="card-title text-lg font-weight-bold">PENDAPAN DAN PENGELUARAN BULAN INI</h1>
+            <h1 class="card-title text-lg font-weight-bold text-uppercase">{{ __("incomes and expenses on this month") }}</h1>
         </div>
           <div class="card-body">
             <div class="row  d-flex justify-content-start align-items-center">
               <div class="col-6">
-                <label for="month-income" class="form-label">Pilih Bulan</label>
+                <label for="month-income" class="form-label text-capitalize">{{ __("select month") }}</label>
                 <div class="input-group mb-3">
                   <div class="w-100 mb-3 d-flex align-items-center py-3">
                     <input type="month" name="month-income" id="month-income" class="form-control w-50">
-                    <button id="filter-income" class="btn btn-primary mx-2"><i class="fas fa-filter"></i>Filter</button>
+                    <button id="filter-income" class="btn btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
                   </div>
                 </div>
               </div>
