@@ -26,7 +26,7 @@
               <div class="inner">
                 <h3>{{$category_count}}</h3>
 
-                <p class="font-weight-bold">{{ __("goods category") }}</p>
+                <p class="font-weight-bold">{{ __("types of goods") }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-ios-pricetags"></i>
