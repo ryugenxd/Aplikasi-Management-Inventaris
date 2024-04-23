@@ -21,8 +21,8 @@ class CustomerController extends Controller
         if($request -> ajax()){
             return DataTables::of($custormers)
             ->addColumn('tindakan',function($data){
-                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>Ubah</button>";
-                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>Hapus</button>";
+                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'><i class='fas fa-pen m-1'></i>".__("edit")."</button>";
+                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'><i class='fas fa-trash m-1'></i>".__("delete")."</button>";
                 return $button;
             })
             ->rawColumns(['tindakan'])

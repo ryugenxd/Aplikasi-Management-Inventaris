@@ -68,7 +68,7 @@
         </div>
       </form>
 
-     
+
       <!-- /.social-auth-links -->
     </div>
     <!-- /.card-body -->
@@ -85,11 +85,6 @@
 <script src="{{asset('theme/dist/js/adminlte.min.js')}}"></script>
 <script>
 $(document).ready(function(){
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
     $("#form-login").submit(function(e){
       e.preventDefault();
       const username = $("#user").val();
@@ -118,6 +113,9 @@ $(document).ready(function(){
           type:"POST",
           dataType:"JSON",
           cache:false,
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
           data:{
             "username":username,
             "password":password

@@ -22,8 +22,8 @@ class SupplierController extends Controller
         if($request -> ajax()){
             return DataTables::of($suppliers)
             ->addColumn('tindakan',function($data){
-                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>Ubah</button>";
-                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>Hapus</button>";
+                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>".__("edit")."</button>";
+                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>".__("delete")."</button>";
                 return $button;
             })
             ->rawColumns(['tindakan'])
