@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Jenis Barang')
+@section('title', __("types of goods"))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">Tambah Data</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
                     @endif
                     </div>
                 </div>
@@ -20,25 +20,26 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Tambah Jenis Barang</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{ __("add type of goods") }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group mb-3">
-                                <label for="name">Nama</label>
+                                <label for="name">{{ __("name") }}</label>
                                 <input type="text" class="form-control" id="name" autocomplete="off">
                                 <input type="hidden" name="id" id="id">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="desc">Keterangan</label>
+                                <label for="desc">{{ __("description") }}</label>
                                 <textarea class="form-control" id="desc"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{ __("back") }}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{ __("save
+                            ") }}</button>
                         </div>
                         </div>
                     </div>
@@ -49,11 +50,11 @@
                         <table id="data-jenis" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0" width="8%">No</th>
-                                    <th class="border-bottom-0">Nama</th>
-                                    <th class="border-bottom-0">Keterangan</th>
+                                    <th class="border-bottom-0" width="8%">{{ __("no") }}</th>
+                                    <th class="border-bottom-0">{{ __("name") }}</th>
+                                    <th class="border-bottom-0">{{ __("description") }}</th>
                                     @if(Auth::user()->role->name != 'staff')
-                                    <th class="border-bottom-0" width="1%">Tindakan</th>
+                                    <th class="border-bottom-0" width="1%">{{ __("action") }}</th>
                                     @endif
                                 </tr>
                             </thead>

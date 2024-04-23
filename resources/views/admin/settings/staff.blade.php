@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Pengaturan Petugas')
+@section('title', __("messages.setting-label", ["name" => __("user")]))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -8,7 +8,7 @@
             <div class="card w-100">
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">Tambah Data</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
                     </div>
                 </div>
 
@@ -18,29 +18,29 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Tambah Data</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{ __("add data") }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" onclick="clear()" >&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group mb-3">
-                                <label for="name">Nama</label>
+                                <label for="name">{{ __("name") }}</label>
                                 <input type="text" class="form-control" id="name" autocomplete="off">
                                 <input type="hidden" name="id" id="id">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="phone_number">Username</label>
+                                <label for="phone_number">{{ __("username") }}</label>
                                 <input type="text" class="form-control" id="username" autocomplete="off">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="password">Password</label>
+                                <label for="password">{{ __("password") }}</label>
                                 <input type="password" class="form-control" id="password"></textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="role">Role</label>
+                                <label for="role">{{ __("role") }}</label>
                                 <select class="form-control" id="role">
-                                    <option selected value="-- Role --">-- Role --</option>
+                                    <option selected value="-- {{ __("role") }} --">-- {{ __("role") }} --</option>
                                     @foreach($roles as $role)
                                         <option value="{{$role->id}}">{{$role->name}}</option>
                                     @endforeach
@@ -48,8 +48,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{ __("back") }}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{ __("save") }}</button>
                         </div>
                         </div>
                     </div>
@@ -60,11 +60,11 @@
                         <table id="data-tabel" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0" width="4%">No</th>
-                                    <th class="border-bottom-0">Nama</th>
-                                    <th class="border-bottom-0">Username</th>
-                                    <th class="border-bottom-0">Role</th>
-                                    <th class="border-bottom-0" width="1%">Tindakan</th>
+                                    <th class="border-bottom-0" width="4%">{{ __("no") }}</th>
+                                    <th class="border-bottom-0">{{ __("name") }}</th>
+                                    <th class="border-bottom-0">{{ __("username") }}</th>
+                                    <th class="border-bottom-0">{{ __("role") }}</th>
+                                    <th class="border-bottom-0" width="1%">{{ __("action") }}</th>
                                 </tr>
                             </thead>
                         </table>

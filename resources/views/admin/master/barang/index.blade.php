@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Barang')
+@section('title', __("goods"))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">Tambah Data</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
                     @endif
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Tambah Barang</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{ __("add goods") }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"  >&times;</span>
                             </button>
@@ -29,64 +29,62 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <div class="form-group">
-                                        <label for="kode" class="form-label">Kode Barang <span class="text-danger">*</span></label>
+                                        <label for="kode" class="form-label">{{ __("code of goods") }} <span class="text-danger">*</span></label>
                                         <input type="text" name="kode" readonly class="form-control">
                                         <input type="hidden" name="id"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="nama" class="form-label">Nama Barang <span class="text-danger">*</span></label>
+                                        <label for="nama" class="form-label">{{ __("name of goods") }} <span class="text-danger">*</span></label>
                                         <input type="text" name="nama" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="jenisbarang" class="form-label">Jenis Barang <span class="text-danger">*</span></label>
+                                        <label for="jenisbarang" class="form-label">{{ __("types of goods") }} <span class="text-danger">*</span></label>
                                         <select name="jenisbarang" class="form-control">
-                                            <option value="">-- Pilih Jenis --</option>
+                                            <option value="">-- {{ __("select category") }} --</option>
                                             @foreach ($jenisbarang as $jb)
                                                 <option value="{{$jb->id}}">{{$jb->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="satuan" class="form-label">Satuan Barang <span class="text-danger">*</span></label>
+                                        <label for="satuan" class="form-label">{{ __("unit of goods") }} <span class="text-danger">*</span></label>
                                         <select name="satuan" class="form-control">
-                                            <option value="">-- Pilih Satuan --</option>
+                                            <option value="">-- {{ __("select unit") }} --</option>
                                             @foreach ($satuan as $s)
                                             <option value="{{$s->id}}">{{$s->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="merk" class="form-label">Merk Barang <span class="text-danger">*</span></label>
+                                        <label for="merk" class="form-label">{{ __("brand of goods") }} <span class="text-danger">*</span></label>
                                         <select name="merk" class="form-control">
-                                            <option value="">-- Pilih Merk --</option>
+                                            <option value="">-- {{ __("select brand") }} --</option>
                                             @foreach ($merk as $m)
                                             <option value="{{$m->id}}">{{$m->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group item-count" id="item-count">
-                                        <label for="harga" class="form-label">Jumlah Awal <span class="text-danger">*</span></label>
+                                        <label for="harga" class="form-label">{{ __("initial amount") }} <span class="text-danger">*</span></label>
                                         <input type="number" value="0" name="jumlah" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="harga" class="form-label">Harga Barang <span class="text-danger">*</span></label>
+                                        <label for="harga" class="form-label">{{ __("price of goods") }} <span class="text-danger">*</span></label>
                                         <input type="text"  id="harga" name="harga" class="form-control" placeholder="RP. 0">
                                     </div>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <label for="title" class="form-label">Foto</label>
-                                        <center>
-                                            <img src="{{asset('default.png')}}" width="80%" alt="profile-user" id="outputImg" class="">
-                                        </center>
+                                        <label for="title" class="form-label">{{ __("photo") }}</label>
+                                        <img src="{{asset('default.png')}}" width="80%" alt="profile-user" id="outputImg" class="text-center">
                                         <input class="form-control mt-5" id="GetFile" name="photo" type="file"  accept=".png,.jpeg,.jpg,.svg">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{ __("back") }}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{ __("save") }}</button>
                         </div>
                         </div>
                     </div>
@@ -97,17 +95,17 @@
                         <table id="data-tabel" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0" width="8%">NO</th>
-                                    <th class="border-bottom-0">GAMBAR</th>
-                                    <th class="border-bottom-0">KODE</th>
-                                    <th class="border-bottom-0">NAMA</th>
-                                    <th class="border-bottom-0">JENIS</th>
-                                    <th class="border-bottom-0">SATUAN</th>
-                                    <th class="border-bottom-0">MERK</th>
-                                    <th class="border-bottom-0">STOK AWAL</th>
-                                    <th class="border-bottom-0">HARGA</th>
+                                    <th class="border-bottom-0" width="8%">{{ __("no") }}</th>
+                                    <th class="border-bottom-0">{{ __("photo") }}</th>
+                                    <th class="border-bottom-0">{{ __("code") }}</th>
+                                    <th class="border-bottom-0">{{ __("name") }}</th>
+                                    <th class="border-bottom-0">{{ __("type") }}</th>
+                                    <th class="border-bottom-0">{{ __("unit") }}</th>
+                                    <th class="border-bottom-0">{{ __("brand") }}</th>
+                                    <th class="border-bottom-0">{{ __("initial stock") }}</th>
+                                    <th class="border-bottom-0">{{ __("price") }}</th>
                                     @if(Auth::user()->role->name != 'staff')
-                                    <th class="border-bottom-0" width="1%">Tindakan</th>
+                                    <th class="border-bottom-0" width="1%">{{ __("action") }}</th>
                                     @endif
                                 </tr>
                             </thead>

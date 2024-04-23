@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Pengaturan Profile')
+@section('title', __("messages.setting-label", ["name" => __("profile")]))
 @section('content')
 <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-start w-100">
@@ -17,20 +17,20 @@
                 <div class="card-body">
                     <input type="hidden" name="id" value="{{Auth::user()->id}}">
                     <div class="form-group mb-3">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">{{ __("name") }}</label>
                         <input type="text" name="name" placeholder="name" id="name" value="{{Auth::user()->name}}" class="form-control">
                     </div>
                     <div class="form-group mb-3">
-                    <label for="username" class="form-label">Username</label>
+                    <label for="username" class="form-label">{{ __("username") }}</label>
                         <input type="text" name="username" placeholder="username" id="username" value="{{Auth::user()->username}}"  class="form-control">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label">{{ __("password") }}</label>
                         <input type="password" name="password" placeholder="password" id="password" class="form-control">
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-end align-items-center">
-                    <button class="btn btn-primary" id="simpan">Simpan</button>
+                    <button class="btn btn-primary" id="simpan">{{ __("save") }}</button>
                 </div>
             </div>
         </div>
