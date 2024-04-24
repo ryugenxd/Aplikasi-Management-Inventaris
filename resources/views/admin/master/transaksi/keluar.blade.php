@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Transaksi Keluar')
+@section('title',__('outbound transaction'))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -8,7 +8,7 @@
             <div class="card w-100">
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
-                        <button class="btn {{$in_status!=0?'btn-success':'btn-danger'}}" type="button"  data-toggle="modal" {{$in_status!=0?'data-target="#TambahData"':'data-target="alert"'}} id="modal-button"><i class="fas fa-plus m-1"></i> Tambah Data </button>
+                        <button class="btn {{$in_status!=0?'btn-success':'btn-danger'}}" type="button"  data-toggle="modal" {{$in_status!=0?'data-target="#TambahData"':'data-target="alert"'}} id="modal-button"><i class="fas fa-plus m-1"></i> {{__('add data')}}</button>
                     </div>
                 </div>
 
@@ -19,7 +19,7 @@
                 <div class="modal-dialog  modal-xl modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Pilih Barang</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">{{__('select items')}}</h5>
                             <button type="button" class="close" id="close-modal-barang" >
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -30,16 +30,16 @@
                                 <table id="data-barang" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                                     <thead>
                                         <tr>
-                                            <th class="border-bottom-0" width="8%">NO</th>
-                                            <th class="border-bottom-0">GAMBAR</th>
-                                            <th class="border-bottom-0">KODE BARANG</th>
-                                            <th class="border-bottom-0">NAMA</th>
-                                            <th class="border-bottom-0">JENIS</th>
-                                            <th class="border-bottom-0">SATUAN</th>
-                                            <th class="border-bottom-0">MERK</th>
-                                            <th class="border-bottom-0">STOK AWAL</th>
-                                            <th class="border-bottom-0">HARGA</th>
-                                            <th class="border-bottom-0" width="1%">Tindakan</th>
+                                            <th class="border-bottom-0" width="8%">{{__('no')}}</th>
+                                            <th class="border-bottom-0">{{__('photo')}}</th>
+                                            <th class="border-bottom-0">{{__('item code')}}</th>
+                                            <th class="border-bottom-0">{{__('name')}}</th>
+                                            <th class="border-bottom-0">{{__('type')}}</th>
+                                            <th class="border-bottom-0">{{__('unit')}}</th>
+                                            <th class="border-bottom-0">{{__('brand')}}</th>
+                                            <th class="border-bottom-0">{{__('first stock')}}</th>
+                                            <th class="border-bottom-0">{{__('price')}}</th>
+                                            <th class="border-bottom-0" width="1%">{{__('action')}}</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -57,7 +57,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Buat Transaksi Keluar</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{__("create an outgoing transaction")}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"  >&times;</span>
                             </button>
@@ -66,19 +66,19 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <div class="form-group">
-                                        <label for="kode" class="form-label">Kode Barang Keluar<span class="text-danger">*</span></label>
+                                        <label for="kode" class="form-label">{{__("outgoing item code")}}<span class="text-danger">*</span></label>
                                         <input type="text" name="kode" readonly class="form-control">
                                         <input type="hidden" name="id"/>
                                         <input type="hidden" name="id_barang"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tanggal_keluar" class="form-label">Tanggal Keluar <span class="text-danger">*</span></label>
+                                        <label for="tanggal_keluar" class="form-label">{{__("out date")}} <span class="text-danger">*</span></label>
                                         <input type="date" name="tanggal_keluar" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="customer" class="form-label">Pilih Customer<span class="text-danger">*</span></label>
+                                        <label for="customer" class="form-label">{{__("choose customers")}}<span class="text-danger">*</span></label>
                                         <select name="customer" class="form-control">
-                                            <option selected value="-- Pilih Customer --">-- Pilih Customer --</option>
+                                            <option selected value="-- Pilih Customer --">-- {{__("choose customers")}} --</option>
                                             @foreach( $customers as $customer)
                                             <option value="{{$customer->id}}">{{$customer->name}}</option>
                                             @endforeach
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <label for="kode_barang" class="form-label">Kode Barang <span class="text-danger">*</span></label>
+                                    <label for="kode_barang" class="form-label">{{__('item code')}} <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="text" name="kode_barang" class="form-control">
                                         <div class="input-group-append">
@@ -95,33 +95,33 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="nama_barang" class="form-label">Nama Barang</label>
+                                        <label for="nama_barang" class="form-label">{{__("item name")}}</label>
                                         <input type="text" name="nama_barang" id="nama_barang" readonly class="form-control">
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="satuan_barang" class="form-label">Satuan</label>
+                                                <label for="satuan_barang" class="form-label">{{__("unit")}}</label>
                                                 <input type="text" name="satuan_barang" readonly class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="jenis_barang" class="form-label">Jenis</label>
+                                                <label for="jenis_barang" class="form-label">{{__("type")}}</label>
                                                 <input type="text" name="jenis_barang" readonly class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="jumlah" class="form-label">Jumlah Keluar<span class="text-danger">*</span></label>
+                                        <label for="jumlah" class="form-label">{{__("outgoing amount")}}<span class="text-danger">*</span></label>
                                         <input type="number" name="jumlah"  class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{__("cancel")}}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{__("save")}}</button>
                         </div>
                         </div>
                     </div>
@@ -132,14 +132,14 @@
                         <table id="data-tabel" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0" width="8%">NO</th>
-                                    <th class="border-bottom-0">TANGGAL KELUAR</th>
-                                    <th class="border-bottom-0">KODE BARANG KELUAR</th>
-                                    <th class="border-bottom-0">KODE BARANG</th>
-                                    <th class="border-bottom-0">CUSTOMER</th>
-                                    <th class="border-bottom-0">BARANG</th>
-                                    <th class="border-bottom-0">JUMLAH KELUAR</th>
-                                    <th class="border-bottom-0" width="1%">TINDAKAN</th>
+                                    <th class="border-bottom-0" width="8%">{{__("no")}}</th>
+                                    <th class="border-bottom-0">{{__("date")}}</th>
+                                    <th class="border-bottom-0">{{__("outgoing item code")}}</th>
+                                    <th class="border-bottom-0">{{__("item code")}}</th>
+                                    <th class="border-bottom-0">{{__("customer")}}</th>
+                                    <th class="border-bottom-0">{{__("item")}}</th>
+                                    <th class="border-bottom-0">{{__("outgoing amount")}}</th>
+                                    <th class="border-bottom-0" width="1%">{{__("action")}}</th>
                                 </tr>
                             </thead>
                         </table>
@@ -206,7 +206,7 @@
                     render:function(data){
                         const pattern = /id='(\d+)'/;
                         const matches = data.match(pattern);
-                        return `<button class='pilih-data-barang btn btn-success' data-id='${matches[1]}'>Pilih</button>`;
+                        return `<button class='pilih-data-barang btn btn-success' data-id='${matches[1]}'>{{__("select")}}</button>`;
                     }
                 }
             ]

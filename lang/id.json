@@ -87,6 +87,8 @@
   "export to pdf":"ekspor ke pdf",
   "export to excel":"ekspor ke excel",
   "date of entry":"tanggal masuk",
+  "out date":"tanggal keluar",
+  "outgoing item code":"kode barang keluar",
   "incoming item code":"kode barang masuk",
   "item code":"kode barang",
   "item":"barang",
@@ -95,5 +97,11 @@
   "stock amount":"jumlah stok",
   "date":"tanggal",
   "first stock":"stok awal",
-  "last stock":"stok akhir"
+  "last stock":"stok akhir",
+  "select items":"pilih barang",
+  "create an outgoing transaction":"membuat transaksi keluar",
+  "choose a supplier":"pilih pemasok",
+  "item name":"nama barang",
+  "choose customers":"pilih pelanggan",
+  "select":"pilih"
 }

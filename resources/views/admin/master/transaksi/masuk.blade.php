@@ -8,7 +8,7 @@
             <div class="card w-100">
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus m-1"></i> Tambah Data </button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus m-1"></i> {{__('add data')}} </button>
                     </div>
                 </div>
 
@@ -17,7 +17,7 @@
                 <div class="modal-dialog  modal-xl modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Pilih Barang</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">{{__('select items')}}</h5>
                             <button type="button" class="close" id="close-modal-barang" >
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -28,9 +28,9 @@
                                 <table id="data-barang" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                                     <thead>
                                         <tr>
-                                            <th class="border-bottom-0" width="8%">NO</th>
-                                            <th class="border-bottom-0">GAMBAR</th>
-                                            <th class="border-bottom-0">KODE BARANG</th>
+                                            <th class="border-bottom-0" width="8%">{{__('no')}}</th>
+                                            <th class="border-bottom-0">{{__('photo')}}</th>
+                                            <th class="border-bottom-0">{{__('item code')}}</th>
                                             <th class="border-bottom-0">NAMA</th>
                                             <th class="border-bottom-0">JENIS</th>
                                             <th class="border-bottom-0">SATUAN</th>
@@ -55,7 +55,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">Buat Transaksi Masuk</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{__('create an outgoing transaction')}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"  >&times;</span>
                             </button>
@@ -64,19 +64,19 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <div class="form-group">
-                                        <label for="kode" class="form-label">Kode Barang Masuk <span class="text-danger">*</span></label>
+                                        <label for="kode" class="form-label">{{__('incoming item code')}} <span class="text-danger">*</span></label>
                                         <input type="text" name="kode" readonly class="form-control">
                                         <input type="hidden" name="id"/>
                                         <input type="hidden" name="id_barang"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tanggal_masuk" class="form-label">Tanggal Masuk <span class="text-danger">*</span></label>
+                                        <label for="tanggal_masuk" class="form-label">{{__('date of entry')}} <span class="text-danger">*</span></label>
                                         <input type="date" name="tanggal_masuk" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="supplier" class="form-label">Pilih Supplier<span class="text-danger">*</span></label>
+                                        <label for="supplier" class="form-label">{{__('choose a supplier')}}<span class="text-danger">*</span></label>
                                         <select name="supplier" class="form-control">
-                                            <option selected value="-- Pilih Supplier --">-- Pilih Supplier --</option>
+                                            <option selected value="-- Pilih Supplier --">-- {{__('choose a supplier')}} --</option>
                                             @foreach( $suppliers as $supplier)
                                             <option value="{{$supplier->id}}">{{$supplier->name}}</option>
                                             @endforeach
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <label for="kode_barang" class="form-label">Kode Barang <span class="text-danger">*</span></label>
+                                    <label for="kode_barang" class="form-label">{{__('item code')}} <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="text" name="kode_barang" class="form-control">
                                         <div class="input-group-append">
@@ -93,33 +93,33 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="nama_barang" class="form-label">Nama Barang</label>
+                                        <label for="nama_barang" class="form-label">{{__("item name")}}</label>
                                         <input type="text" name="nama_barang" id="nama_barang" readonly class="form-control">
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="satuan_barang" class="form-label">Satuan</label>
+                                                <label for="satuan_barang" class="form-label">{{__("unit")}}</label>
                                                 <input type="text" name="satuan_barang" readonly class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="jenis_barang" class="form-label">Jenis</label>
+                                                <label for="jenis_barang" class="form-label">{{__("type")}}</label>
                                                 <input type="text" name="jenis_barang" readonly class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="jumlah" class="form-label">Jumlah Masuk<span class="text-danger">*</span></label>
+                                        <label for="jumlah" class="form-label">{{__("incoming amount")}}<span class="text-danger">*</span></label>
                                         <input type="number" name="jumlah"  class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">Kembali</button>
-                            <button type="button" class="btn btn-success" id="simpan">Simpan</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="kembali">{{__("cancel")}}</button>
+                            <button type="button" class="btn btn-success" id="simpan">{{__("save")}}</button>
                         </div>
                         </div>
                     </div>
@@ -130,14 +130,14 @@
                         <table id="data-tabel" width="100%"  class="table table-bordered text-nowrap border-bottom dataTable no-footer dtr-inline collapsed">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0" width="8%">NO</th>
-                                    <th class="border-bottom-0">TANGGAL MASUK</th>
-                                    <th class="border-bottom-0">KODE BARANG MASUK</th>
-                                    <th class="border-bottom-0">KODE BARANG</th>
-                                    <th class="border-bottom-0">SUPPLIER</th>
-                                    <th class="border-bottom-0">BARANG</th>
-                                    <th class="border-bottom-0">JUMLAH MASUK</th>
-                                    <th class="border-bottom-0" width="1%">TINDAKAN</th>
+                                    <th class="border-bottom-0" width="8%">{{__("no")}}</th>
+                                    <th class="border-bottom-0">{{__("date of entry")}}</th>
+                                    <th class="border-bottom-0">{{__("incoming item code")}}</th>
+                                    <th class="border-bottom-0">{{__("item code")}}</th>
+                                    <th class="border-bottom-0">{{__("supplier")}}</th>
+                                    <th class="border-bottom-0">{{__("item")}}</th>
+                                    <th class="border-bottom-0">{{__("incoming amount")}}</th>
+                                    <th class="border-bottom-0" width="1%">{{__("action")}}</th>
                                 </tr>
                             </thead>
                         </table>
@@ -215,7 +215,7 @@
 
 
 
-    
+
     $(document).ready(function(){
         load();
 
@@ -259,10 +259,10 @@
                 $("input[name='jenis_barang']").val(data.category_name);
             }
         });
-        
+
     }
 
-    
+
 
 
     function simpan(){
@@ -308,7 +308,7 @@
                 error:function(err){
                     console.log(err);
             },
-        })     
+        })
     }
 
 
@@ -346,9 +346,9 @@
                 error:function(err){
                     console.log(err);
             },
-        })     
+        })
     }
-    
+
     $(document).ready(function(){
         $('#data-tabel').DataTable({
             lengthChange: true,
@@ -420,7 +420,7 @@
             $("input[name='jenis_barang']").val(null);
             $("input[name='satuan_barang']").val(null);
             $("input[name='jumlah']").val(null);
-            $('#simpan').text("Simpan");
+            $('#simpan').text("{{__('save')}}");
         });
 
 
@@ -451,7 +451,7 @@
                 $("input[name='jumlah']").val(data.quantity);
             }
         });
-        
+
     });
 
     $(document).on("click",".hapus",function(){
@@ -494,7 +494,7 @@
             }
         });
 
-        
+
     });
 
 
