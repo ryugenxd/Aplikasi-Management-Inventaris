@@ -6545,3 +6545,20 @@
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
 "}
+[2024-04-24 11:38:15] local.ERROR: Command "see" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"see\" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/symfony/console/Application.php:704)
+[stacktrace]
+#0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/symfony/console/Application.php(260): Symfony\\Component\\Console\\Application->find()
+#1 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#3 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /home/ryugenxd/Aplikasi-Management-Inventaris/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 
