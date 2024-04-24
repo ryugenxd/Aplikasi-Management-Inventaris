@@ -54,7 +54,7 @@
 #51 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #52 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #53 {main}
-"} 
+"}
 [2024-04-08 10:04:52] local.ERROR: Disk [public/profile/] does not have a configured driver. {"userId":2,"exception":"[object] (InvalidArgumentException(code: 0): Disk [public/profile/] does not have a configured driver. at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php:137)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php(120): Illuminate\\Filesystem\\FilesystemManager->resolve('public/profile/')
@@ -111,7 +111,7 @@
 #51 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #52 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #53 {main}
-"} 
+"}
 [2024-04-08 10:04:54] local.ERROR: Disk [public/profile/] does not have a configured driver. {"userId":2,"exception":"[object] (InvalidArgumentException(code: 0): Disk [public/profile/] does not have a configured driver. at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php:137)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php(120): Illuminate\\Filesystem\\FilesystemManager->resolve('public/profile/')
@@ -168,7 +168,7 @@
 #51 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #52 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #53 {main}
-"} 
+"}
 [2024-04-08 10:06:11] local.ERROR: Disk [public/profile] does not have a configured driver. {"userId":2,"exception":"[object] (InvalidArgumentException(code: 0): Disk [public/profile] does not have a configured driver. at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php:137)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php(120): Illuminate\\Filesystem\\FilesystemManager->resolve('public/profile')
@@ -225,7 +225,7 @@
 #51 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #52 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #53 {main}
-"} 
+"}
 [2024-04-08 10:07:22] local.ERROR: Disk [public/profile] does not have a configured driver. {"userId":2,"exception":"[object] (InvalidArgumentException(code: 0): Disk [public/profile] does not have a configured driver. at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php:137)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php(120): Illuminate\\Filesystem\\FilesystemManager->resolve('public/profile')
@@ -282,7 +282,7 @@
 #51 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #52 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #53 {main}
-"} 
+"}
 [2024-04-08 10:58:34] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(967): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -407,7 +407,7 @@
 #62 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #63 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #64 {main}
-"} 
+"}
 [2024-04-08 10:58:38] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(967): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -532,7 +532,7 @@
 #62 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #63 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #64 {main}
-"} 
+"}
 [2024-04-08 10:58:55] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `sessions` where `id` = mzUn8oENn4292UnvTooDhhCY917QO62k5QsgIC36 limit 1) at /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(967): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -657,7 +657,7 @@
 #62 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #63 /data/data/com.termux/files/home/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/data/data/com....')
 #64 {main}
-"} 
+"}
 [2024-04-08 14:03:07] local.ERROR: Route [settings.staff] not defined. {"view":{"view":"/home/ryugenxd/Aplikasi-Management-Inventaris/resources/views/admin/dashboard.blade.php","data":[]},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [settings.staff] not defined. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:477)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(811): Illuminate\\Routing\\UrlGenerator->route()
@@ -787,7 +787,7 @@
 #59 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #60 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #61 {main}
-"} 
+"}
 [2024-04-08 14:04:00] local.ERROR: Route [settings.staff] not defined. {"view":{"view":"/home/ryugenxd/Aplikasi-Management-Inventaris/resources/views/admin/dashboard.blade.php","data":[]},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [settings.staff] not defined. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:477)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(811): Illuminate\\Routing\\UrlGenerator->route()
@@ -917,7 +917,7 @@
 #59 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #60 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #61 {main}
-"} 
+"}
 [2024-04-09 02:23:32] local.ERROR: Class "App\Http\Controllers\GoodsIn" not found {"userId":3,"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\GoodsIn\" not found at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:65)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\ReportStockController->grafik()
@@ -970,7 +970,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-09 02:23:47] local.ERROR: Class "App\Http\Controllers\GoodsIn" not found {"userId":3,"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\GoodsIn\" not found at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:65)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\ReportStockController->grafik()
@@ -1023,7 +1023,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-09 02:49:02] local.ERROR: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '-- Pilih Supplier --' for column `db_inventory`.`goods_in`.`supplier_id` at row 1 (Connection: mysql, SQL: insert into `goods_in` (`user_id`, `supplier_id`, `date_received`, `quantity`, `invoice_number`, `item_id`, `updated_at`, `created_at`) values (3, -- Pilih Supplier --, ?, 678, BRGMSK-1712630930211, 1, 2024-04-09 02:49:02, 2024-04-09 02:49:02)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '-- Pilih Supplier --' for column `db_inventory`.`goods_in`.`supplier_id` at row 1 (Connection: mysql, SQL: insert into `goods_in` (`user_id`, `supplier_id`, `date_received`, `quantity`, `invoice_number`, `item_id`, `updated_at`, `created_at`) values (3, -- Pilih Supplier --, ?, 678, BRGMSK-1712630930211, 1, 2024-04-09 02:49:02, 2024-04-09 02:49:02)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -1163,7 +1163,7 @@
 #65 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #66 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #67 {main}
-"} 
+"}
 [2024-04-09 03:07:48] local.ERROR: Property [goodsIns] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [goodsIns] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php(73): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -1217,7 +1217,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-09 03:08:27] local.ERROR: Call to undefined function App\Http\Controllers\whereYear() {"userId":3,"exception":"[object] (Error(code: 0): Call to undefined function App\\Http\\Controllers\\whereYear() at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:69)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\ReportStockController->grafik()
@@ -1270,7 +1270,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-09 03:08:40] local.ERROR: Call to undefined function App\Http\Controllers\whereYear() {"userId":3,"exception":"[object] (Error(code: 0): Call to undefined function App\\Http\\Controllers\\whereYear() at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:69)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\ReportStockController->grafik()
@@ -1323,7 +1323,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-09 03:09:08] local.ERROR: Class "App\Http\Controllers\DB" not found {"userId":3,"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\DB\" not found at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:73)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\ReportStockController->grafik()
@@ -1376,7 +1376,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-09 03:13:17] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (romli, 087373737, ?, 2024-04-09 03:13:17, 2024-04-09 03:13:17)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (romli, 087373737, ?, 2024-04-09 03:13:17, 2024-04-09 03:13:17)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -1508,7 +1508,7 @@
 #61 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #62 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #63 {main}
-"} 
+"}
 [2024-04-09 04:12:01] local.ERROR: Undefined array key 1 {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined array key 1 at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:68)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -1563,7 +1563,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-09 04:12:04] local.ERROR: Undefined array key 1 {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined array key 1 at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ReportStockController.php:68)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -1618,7 +1618,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-09 04:22:00] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'unit_id' cannot be null (Connection: mysql, SQL: insert into `items` (`name`, `code`, `price`, `category_id`, `brand_id`, `unit_id`, `updated_at`, `created_at`) values (kertas hvs, BRG-1712636478062, RP.70.000, 3, 4, ?, 2024-04-09 04:22:00, 2024-04-09 04:22:00)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'unit_id' cannot be null (Connection: mysql, SQL: insert into `items` (`name`, `code`, `price`, `category_id`, `brand_id`, `unit_id`, `updated_at`, `created_at`) values (kertas hvs, BRG-1712636478062, RP.70.000, 3, 4, ?, 2024-04-09 04:22:00, 2024-04-09 04:22:00)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -1762,7 +1762,7 @@
 #67 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #68 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #69 {main}
-"} 
+"}
 [2024-04-09 06:33:17] local.ERROR: stripos(): Argument #1 ($haystack) must be of type string, Closure given {"userId":3,"exception":"[object] (TypeError(code: 0): stripos(): Argument #1 ($haystack) must be of type string, Closure given at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Grammar.php:86)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Grammar.php(86): stripos()
@@ -1830,7 +1830,7 @@
 #62 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #64 {main}
-"} 
+"}
 [2024-04-09 06:36:33] local.ERROR: Unsupported operand types: int + string {"userId":3,"exception":"[object] (TypeError(code: 0): Unsupported operand types: int + string at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:521)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(787): Illuminate\\Support\\Collection->Illuminate\\Support\\Traits\\{closure}()
@@ -1886,7 +1886,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-09 06:59:50] local.ERROR: Route [laporan.pendapatan] not defined. {"view":{"view":"/home/ryugenxd/Aplikasi-Management-Inventaris/resources/views/admin/dashboard.blade.php","data":[]},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [laporan.pendapatan] not defined. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:477)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(811): Illuminate\\Routing\\UrlGenerator->route()
@@ -2016,7 +2016,7 @@
 #59 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #60 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #61 {main}
-"} 
+"}
 [2024-04-09 08:59:56] local.ERROR: Attempt to read property "category" on null {"userId":3,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"category\" on null at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ItemController.php:94)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -2071,7 +2071,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-11 09:08:22] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":2,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ItemController.php(60): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2125,7 +2125,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-11 09:10:33] local.ERROR: Property [items] does not exist on this collection instance. {"userId":2,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ItemController.php(60): Illuminate\\Support\\Collection->__get()
@@ -2179,7 +2179,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-11 09:11:06] local.ERROR: Property [items] does not exist on this collection instance. {"userId":2,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ItemController.php(60): Illuminate\\Support\\Collection->__get()
@@ -2233,7 +2233,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-11 09:11:15] local.ERROR: Method Illuminate\Database\Eloquent\Collection::items does not exist. {"userId":2,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Database\\Eloquent\\Collection::items does not exist. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:112)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/ItemController.php(60): Illuminate\\Support\\Collection->__call()
@@ -2287,7 +2287,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:35:32] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(124): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2343,7 +2343,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-22 04:35:57] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2397,7 +2397,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:36:20] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2451,7 +2451,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:36:27] local.ERROR: Property [item] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2505,7 +2505,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:36:45] local.ERROR: Call to undefined method Illuminate\Database\Eloquent\Builder::query() {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method Illuminate\\Database\\Eloquent\\Builder::query() at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Builder::throwBadMethodCallException()
@@ -2561,7 +2561,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-22 04:37:33] local.ERROR: Call to undefined method Illuminate\Database\Eloquent\Builder::query() {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method Illuminate\\Database\\Eloquent\\Builder::query() at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2001): Illuminate\\Database\\Eloquent\\Builder::throwBadMethodCallException()
@@ -2616,7 +2616,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-22 04:37:52] local.ERROR: Property [query] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [query] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -2670,7 +2670,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:37:59] local.ERROR: Call to undefined method Illuminate\Database\Eloquent\Builder::query() {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method Illuminate\\Database\\Eloquent\\Builder::query() at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Builder::throwBadMethodCallException()
@@ -2726,7 +2726,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-22 04:47:56] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -2780,7 +2780,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:48:02] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -2834,7 +2834,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:48:39] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -2888,7 +2888,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:48:58] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -2942,7 +2942,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:49:42] local.ERROR: Undefined array key "items" {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined array key \"items\" at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Collection.php:1780)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -2998,7 +2998,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-22 04:49:57] local.ERROR: Undefined array key "items" {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined array key \"items\" at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Collection.php:1780)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -3054,7 +3054,7 @@
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-04-22 04:50:06] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -3108,7 +3108,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:51:01] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -3162,7 +3162,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:51:19] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -3216,7 +3216,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:51:47] local.ERROR: Method Illuminate\Database\Eloquent\Collection::items does not exist. {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Database\\Eloquent\\Collection::items does not exist. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:112)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__call()
@@ -3270,7 +3270,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:51:53] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Support\\Collection->__get()
@@ -3324,7 +3324,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:55:40] local.ERROR: Property [name] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [name] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3378,7 +3378,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:56:01] local.ERROR: Cannot throw objects that do not implement Throwable {"userId":3,"exception":"[object] (Error(code: 0): Cannot throw objects that do not implement Throwable at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:124)
 [stacktrace]
 #0 [internal function]: App\\Http\\Controllers\\TransactionInController->App\\Http\\Controllers\\{closure}()
@@ -3436,7 +3436,7 @@
 #52 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #53 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #54 {main}
-"} 
+"}
 [2024-04-22 04:57:00] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3490,7 +3490,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 04:57:06] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3544,7 +3544,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:00:41] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3598,7 +3598,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:02:54] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3652,7 +3652,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:03:03] local.ERROR: Property [name] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [name] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(127): Illuminate\\Support\\Collection->__get()
@@ -3706,7 +3706,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:06:03] local.ERROR: syntax error, unexpected token "}" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"}\" at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:134)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/composer/ClassLoader.php(433): Composer\\Autoload\\{closure}()
@@ -3743,7 +3743,7 @@
 #31 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #32 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #33 {main}
-"} 
+"}
 [2024-04-22 05:06:26] local.ERROR: Property [relations] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [relations] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(131): Illuminate\\Support\\Collection->__get()
@@ -3797,7 +3797,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:06:33] local.ERROR: Property [relation] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [relation] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(131): Illuminate\\Support\\Collection->__get()
@@ -3851,7 +3851,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:06:43] local.ERROR: Method Illuminate\Database\Eloquent\Collection::relations does not exist. {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Database\\Eloquent\\Collection::relations does not exist. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:112)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(131): Illuminate\\Support\\Collection->__call()
@@ -3905,7 +3905,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:07:15] local.ERROR: Property [item] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(131): Illuminate\\Support\\Collection->__get()
@@ -3959,7 +3959,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:07:21] local.ERROR: Property [items] does not exist on this collection instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on this collection instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:1007)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(131): Illuminate\\Support\\Collection->__get()
@@ -4013,7 +4013,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:07:47] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -4067,7 +4067,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:07:53] local.ERROR: Property [item] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [item] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -4121,7 +4121,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:08:06] local.ERROR: Property [items] does not exist on the Eloquent builder instance. {"userId":3,"exception":"[object] (Exception(code: 0): Property [items] does not exist on the Eloquent builder instance. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1932)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php(123): Illuminate\\Database\\Eloquent\\Builder->__get()
@@ -4175,7 +4175,7 @@
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #50 {main}
-"} 
+"}
 [2024-04-22 05:22:58] local.ERROR: Undefined variable $request {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined variable $request at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:124)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -4230,7 +4230,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-22 05:23:10] local.ERROR: Undefined variable $request {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined variable $request at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:124)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -4285,7 +4285,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-22 05:24:42] local.ERROR: Undefined variable $request {"userId":3,"exception":"[object] (ErrorException(code: 0): Undefined variable $request at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:124)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -4340,7 +4340,7 @@
 #49 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #50 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #51 {main}
-"} 
+"}
 [2024-04-22 05:25:18] local.ERROR: App\Http\Controllers\TransactionInController::listIn(): Return value must be of type Illuminate\Http\JsonResponse, none returned {"userId":3,"exception":"[object] (TypeError(code: 0): App\\Http\\Controllers\\TransactionInController::listIn(): Return value must be of type Illuminate\\Http\\JsonResponse, none returned at /home/ryugenxd/Aplikasi-Management-Inventaris/app/Http/Controllers/TransactionInController.php:150)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): App\\Http\\Controllers\\TransactionInController->listIn()
@@ -4393,7 +4393,7 @@
 #47 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #48 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2024-04-22 05:31:23] local.ERROR: The "-s" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-s\" option does not exist. at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/symfony/console/Input/ArgvInput.php:119)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/symfony/console/Input/ArgvInput.php(101): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet()
@@ -4409,7 +4409,7 @@
 #10 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
 #11 /home/ryugenxd/Aplikasi-Management-Inventaris/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #12 {main}
-"} 
+"}
 [2024-04-23 04:27:05] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `sessions` where `id` = 3iFlXevVxyqnWoeIIups1mMWUsyE8yMXZhpAo0M6 limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `sessions` where `id` = 3iFlXevVxyqnWoeIIups1mMWUsyE8yMXZhpAo0M6 limit 1) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -4529,7 +4529,7 @@
 #59 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #60 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #61 {main}
-"} 
+"}
 [2024-04-23 04:36:27] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `sessions` where `id` = XtHugI1imFH8ILva1UOj1cYOCFEqBVOvSFOMCeDM limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: select * from `sessions` where `id` = XtHugI1imFH8ILva1UOj1cYOCFEqBVOvSFOMCeDM limit 1) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -4649,7 +4649,7 @@
 #59 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #60 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #61 {main}
-"} 
+"}
 [2024-04-23 04:36:28] local.ERROR: Target class [localization] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [localization] does not exist. at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:906)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(787): Illuminate\\Container\\Container->build('localization')
@@ -4676,7 +4676,7 @@
 #8 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #9 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #10 {main}
-"} 
+"}
 [2024-04-23 04:37:00] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: delete from `cache`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (Connection: mysql, SQL: delete from `cache`) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('delete from `ca...', Array, Object(Closure))
@@ -4734,7 +4734,7 @@
 #27 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #28 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #29 {main}
-"} 
+"}
 [2024-04-23 04:37:32] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'db_inventory' (Connection: mysql, SQL: delete from `cache`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'db_inventory' (Connection: mysql, SQL: delete from `cache`) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('delete from `ca...', Array, Object(Closure))
@@ -4792,7 +4792,7 @@
 #27 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #28 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #29 {main}
-"} 
+"}
 [2024-04-23 04:39:27] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'db_inventory' (Connection: mysql, SQL: delete from `cache`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'db_inventory' (Connection: mysql, SQL: delete from `cache`) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('delete from `ca...', Array, Object(Closure))
@@ -4850,7 +4850,7 @@
 #27 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #28 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #29 {main}
-"} 
+"}
 [2024-04-23 04:40:24] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_inventory.cache' doesn't exist (Connection: mysql, SQL: delete from `cache`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_inventory.cache' doesn't exist (Connection: mysql, SQL: delete from `cache`) at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:813)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('delete from `ca...', Array, Object(Closure))
@@ -4902,7 +4902,7 @@
 #21 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #22 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #23 {main}
-"} 
+"}
 [2024-04-23 04:40:40] local.ERROR: The "-s" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-s\" option does not exist. at C:\\Users\\Axioo\\inventaris\\vendor\\symfony\\console\\Input\\ArgvInput.php:119)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\symfony\\console\\Input\\ArgvInput.php(101): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('seed')
@@ -4918,7 +4918,7 @@
 #10 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #11 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #12 {main}
-"} 
+"}
 [2024-04-23 04:40:54] local.ERROR: The "-s" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-s\" option does not exist. at C:\\Users\\Axioo\\inventaris\\vendor\\symfony\\console\\Input\\ArgvInput.php:119)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\symfony\\console\\Input\\ArgvInput.php(101): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('seed')
@@ -4934,7 +4934,7 @@
 #10 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #11 C:\\Users\\Axioo\\inventaris\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #12 {main}
-"} 
+"}
 [2024-04-23 04:41:02] local.ERROR: Target class [localization] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [localization] does not exist. at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:906)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(787): Illuminate\\Container\\Container->build('localization')
@@ -5037,7 +5037,7 @@
 #46 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #47 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #48 {main}
-"} 
+"}
 [2024-04-23 04:41:03] local.ERROR: Target class [localization] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [localization] does not exist. at C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:906)
 [stacktrace]
 #0 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(787): Illuminate\\Container\\Container->build('localization')
@@ -5064,7 +5064,7 @@
 #8 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #9 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #10 {main}
-"} 
+"}
 [2024-04-23 04:41:49] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"C:\\Users\\Axioo\\inventaris\\resources\\views\\admin\\login.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1279173872 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#537</a><samp data-depth=1 class=sf-dump-expanded>
   #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
 </samp>}
@@ -5192,7 +5192,7 @@
 #56 C:\\Users\\Axioo\\inventaris\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #57 C:\\Users\\Axioo\\inventaris\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Axioo\\\\...')
 #58 {main}
-"} 
+"}
 [2024-04-23 07:38:27] local.ERROR: syntax error, unexpected token "<", expecting ")" {"view":{"view":"/home/ryugenxd/Aplikasi-Management-Inventaris/resources/views/admin/master/customer.blade.php","data":[]},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): syntax error, unexpected token \"<\", expecting \")\" at /home/ryugenxd/Aplikasi-Management-Inventaris/resources/views/admin/master/customer.blade.php:2)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
@@ -5320,7 +5320,7 @@
 #58 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #59 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #60 {main}
-"} 
+"}
 [2024-04-23 08:11:40] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:40, 2024-04-23 08:11:40)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:40, 2024-04-23 08:11:40)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -5456,7 +5456,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:42] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:42, 2024-04-23 08:11:42)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:42, 2024-04-23 08:11:42)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -5592,7 +5592,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:43] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -5728,7 +5728,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:43] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -5864,7 +5864,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:43] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -6000,7 +6000,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:43] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:43, 2024-04-23 08:11:43)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -6136,7 +6136,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:44] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:44, 2024-04-23 08:11:44)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:44, 2024-04-23 08:11:44)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -6272,7 +6272,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 08:11:44] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:44, 2024-04-23 08:11:44)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (hello wok, 0393939, ?, 2024-04-23 08:11:44, 2024-04-23 08:11:44)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -6408,7 +6408,7 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
 [2024-04-23 12:16:47] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (test, 09988383, ?, 2024-04-23 12:16:47, 2024-04-23 12:16:47)) {"userId":3,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'address' cannot be null (Connection: mysql, SQL: insert into `customers` (`name`, `phone_number`, `address`, `updated_at`, `created_at`) values (test, 09988383, ?, 2024-04-23 12:16:47, 2024-04-23 12:16:47)) at /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
 [stacktrace]
 #0 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
@@ -6544,4 +6544,4 @@
 #63 /home/ryugenxd/Aplikasi-Management-Inventaris/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #64 /home/ryugenxd/Aplikasi-Management-Inventaris/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #65 {main}
-"} 
+"}
