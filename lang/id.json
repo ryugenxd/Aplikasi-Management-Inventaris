@@ -67,12 +67,15 @@
   "save":"simpan",
   "cancel":"baltalkan",
   "no, cancel":"tidak, baltalkan",
-  "name":"nama",
   "phone number":"nomor telepon",
   "address":"alamat",
   "email":"surel",
   "website":"situs web",
-  "action":"tindakan",
   "delete":"hapus",
+  "description": "keterangan",
+  "date": "tanggal",
+  "start date": "tanggal awal",
+  "end date": "tanggal akhir",
+  "back": "kembali",
   "edit":"ubah"
 }
