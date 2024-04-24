@@ -18,15 +18,15 @@ class BrandController extends Controller
     {
         return view('admin.master.barang.merk');
     }
-    
+
     public function list(Request $request): JsonResponse
     {
         $brands = Brand::latest()->get();
         if($request -> ajax()){
             return DataTables::of($brands)
             ->addColumn('tindakan',function($data){
-                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>Ubah</button>";
-                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>Hapus</button>";
+                $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'><i class='fas fa-pen m-1'></i>".__("edit")."</button>";
+                $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'><i class='fas fa-trash m-1'></i>".__("delete")."</button>";
                 return $button;
             })
             ->rawColumns(['tindakan'])
@@ -45,16 +45,16 @@ class BrandController extends Controller
         $status = $brands -> save();
         if(!$status){
             return response()->json(
-                ["message"=>"Data Gagal Di Simpan"]
+                ["message"=>__("failed to save")]
             )->setStatusCode(400);
         }
         return response() -> json([
-            "message"=>"Data Berhasil Di Simpan"
+            "message"=>__("saved successfully")
         ]) -> setStatusCode(200);
     }
 
     public function detail(DetailBrandRequest $request): JsonResponse
-    {  
+    {
         $id = $request -> id;
         $data = Brand::find($id);
         return response()->json(
@@ -70,11 +70,11 @@ class BrandController extends Controller
         $status = $data -> save();
         if(!$status){
             return response()->json(
-                ["message"=>"Data Gagal Di Ubah"]
+                ["message"=>__("data failed to change")]
             )->setStatusCode(400);
         }
         return response() -> json([
-            "message"=>"Data Berhasil Di Ubah"
+            "message"=>__("data changed successfully")
         ]) -> setStatusCode(200);
     }
 
@@ -85,11 +85,11 @@ class BrandController extends Controller
         $status = $brands -> delete();
         if(!$status){
             return response()->json(
-                ["message"=>"Data Gagal Di Hapus"]
+                ["message"=>__("data failed to delete")]
             )->setStatusCode(400);
         }
         return response()->json([
-            "message"=>"Data Berhasil Di Hapus"
+            "message"=>__("data deleted successfully")
         ]) -> setStatusCode(200);
     }
 }

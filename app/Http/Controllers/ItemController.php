@@ -44,8 +44,8 @@ class ItemController extends Controller
                 return $data -> brand -> name;
             })
             -> addColumn('tindakan',function($data){
-                    $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'>Ubah</button>";
-                    $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'>Hapus</button>";
+                    $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'><i class='fas fa-pen m-1'></i>".__("edit")."</button>";
+                    $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'><i class='fas fa-trash m-1'></i>".__("delete")."</button>";
                     return $button;
             })
             ->rawColumns(['img','tindakan'])
@@ -72,7 +72,7 @@ class ItemController extends Controller
         }
         Item::create($data);
         return response() -> json([
-            "message"=>"Data Berhasil Di Simpan"
+            "message"=>__("saved successfully")
         ]) -> setStatusCode(200);
     }
 
@@ -121,7 +121,7 @@ class ItemController extends Controller
         $item -> fill($data);
         $item -> save();
         return response() -> json([
-            "message"=>"Data Berhasil Di Ubah"
+            "message"=>__("data changed successfully")
         ]) -> setStatusCode(200);
 
     }
@@ -134,11 +134,11 @@ class ItemController extends Controller
         $status = $item -> delete();
         if(!$status){
             return response()->json(
-                ["message"=>"Data Gagal Di Hapus"]
+                ["message"=>__("data failed to delete")]
             )->setStatusCode(400);
         }
         return response()->json([
-            "message"=>"Data Berhasil Di Hapus"
+            "message"=>__("data deleted successfully")
         ]) -> setStatusCode(200);
     }
 }

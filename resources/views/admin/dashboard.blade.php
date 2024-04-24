@@ -320,9 +320,10 @@ $(document).ready(function() {
                 label: 'harga',
                 data: [data.pengeluaran,data.pendapatan, data.total],
                   backgroundColor: [
-                    'rgba(245, 86, 86, 0.8)',
-                    'rgba(245, 86, 217, 0.8)',
-                    'rgba(86, 245, 124, 0.8)',
+                    // 'rgba(245, 86, 86, 0.8)',
+                    // 'rgba(245, 86, 217, 0.8)',
+                    // 'rgba(86, 245, 124, 0.8)',
+                    'rgba(0,0,0,0)',
                   ],
                   borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -367,7 +368,7 @@ $(document).ready(function() {
              }
 
               const ChartPendaptan = new Chart(pendapatan,{
-                type:'bar',
+                type:'line',
                 data:data_income,
                 options:opsi
               });

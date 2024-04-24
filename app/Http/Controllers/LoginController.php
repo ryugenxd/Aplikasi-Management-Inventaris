@@ -23,14 +23,14 @@ class LoginController extends Controller
         if(!Auth::guard('web')->attempt(['username'=>$username,'password'=>$password])){
             return response()->json([
                 "success"=>false,
-                "message"=>"Username Atau Password Salah !"
+                "message"=>__("incorrect username or password")." !"
             ])
             ->setStatusCode(401);
         }
         return response()->json([
             "route"=>route('dashboard'),
             "success"=>true,
-            "message"=>"Login Berhasil !"
+            "message"=>__("login successful")." !"
         ])
         ->setStatusCode(200);
     }

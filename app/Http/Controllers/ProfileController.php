@@ -14,7 +14,7 @@ class ProfileController extends Controller
     {
         return view('admin.settings.profile');
     }
-    
+
     public function update(Request $request):JsonResponse
     {
         $id = $request -> id;
@@ -39,11 +39,11 @@ class ProfileController extends Controller
         $status = $user -> save();
         if(!$status){
             return response()->json(
-                ["message"=>"Data Gagal Di Ubah"]
+                ["message"=>__("data failed to change")]
             )->setStatusCode(400);
         }
         return response() -> json([
-            "message"=>"Data Berhasil Di Ubah"
+            "message"=>__("data changed successfully")
         ]) -> setStatusCode(200);
     }
 }

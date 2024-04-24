@@ -1,4 +1,13 @@
 ## Aplikasi Management Inventaris LARAVEL 11
+
+## setup 
+- change database configuration in file `.env`
+``
+php artisan migrate --seed 
+php artisan serve
+``
+open url http://localhost:8000 in your browser 
+
 includes a complete requirements code library
 
 

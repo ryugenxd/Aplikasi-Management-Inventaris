@@ -17,6 +17,12 @@
   <link rel="stylesheet" href="{{asset('theme/alert/css/sweetalert2.css')}}">
    <!-- sweetalert js-->
   <script src="{{asset('theme/alert/js/sweetalert2.js')}}"></script>
+  <link rel="stylesheet" href="{{ asset("localizations/flags.css") }}">
+  <style>
+        .lang-icon {
+            background-image: url('{{ asset("localizations/flags.png") }}');
+        }
+  </style>
 </head>
 <body class="hold-transition login-page">
   <!-- Preloader -->
@@ -32,6 +38,17 @@
           <img src="{{asset('icon.jpg')}}" alt="icon"  width="50%">
         </div>
       <a href="#" class="h1" style="text-transform:uppercase;">{{config('app.name')}}</a>
+      <div class="navbar">
+          <div class="dropdown" href="#" data-target="#lang" data-toggle="dropdown" role="button">
+            <div class="d-flex gap-2 align-items-center">
+              <span class="lang-icon lang-icon-{{ app()->getLocale() }}"></span>
+              <span class="ml-2">ID</span>
+            </div>
+            <div class="dropdown-menu" id="lang">
+                <ul id="lang-dropdown" class="d-flex flex-column gap-2" style="max-height: 12rem;overflow-y: scroll;"></ul>
+            </div>
+          </div>
+        </div>
     </div>
     <div class="card-body">
       <!-- <p class="alert alert-danger mb-3 text-center font-weight-bold">username atau password salah.</p> -->
@@ -68,7 +85,7 @@
         </div>
       </form>
 
-     
+
       <!-- /.social-auth-links -->
     </div>
     <!-- /.card-body -->
@@ -84,12 +101,29 @@
 <!-- AdminLTE App -->
 <script src="{{asset('theme/dist/js/adminlte.min.js')}}"></script>
 <script>
+  function changeLanguage(lang) {
+    let url = new URL(window.location.href);
+
+    url.searchParams.set("lang", lang);
+    window.location.href = url.toString();
+  }
+  $(document).ready(async () => {
+    let languages = await (await fetch("{{ url(asset('localizations/languages.json')) }}")).json();
+    for (let code in languages) {
+      let native = languages[code].nameNative;
+      let english = languages[code].nameEnglish;
+
+      $("#lang-dropdown").append(`
+        <li onclick="changeLanguage('${ code }')" class="d-flex align-items-center justify-content-start gap-2 px-2">
+          <div class="lang-icon lang-icon-${ code }"></div>
+          <span class="ml-2 text-uppercase" style="font-size: .8rem" data-text="${ english }">${ code }</span>
+        </li>
+      `);
+    }
+  });
+</script>
+<script>
 $(document).ready(function(){
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
     $("#form-login").submit(function(e){
       e.preventDefault();
       const username = $("#user").val();
@@ -118,6 +152,9 @@ $(document).ready(function(){
           type:"POST",
           dataType:"JSON",
           cache:false,
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
           data:{
             "username":username,
             "password":password
