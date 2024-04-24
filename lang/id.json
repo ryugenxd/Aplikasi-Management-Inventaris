@@ -72,5 +72,14 @@
   "website":"situs web",
   "action":"tindakan",
   "delete":"hapus",
-  "edit":"ubah"
+  "edit":"ubah",
+  "failed to save":"gagal menyimpan",
+  "saved successfully":"berhasil disimpan",
+  "data failed to change":"data gagal diubah",
+  "data changed successfully":"data berhasil diubah",
+  "data failed to delete":"data gagal dihapus",
+  "data deleted successfully":"data berhasil dihapus",
+  "incorrect username or password":"username atau kata sandi salah",
+  "login successful":"login berhasil",
+  "insufficient stock this month":"stok tidak mencukupi bulan ini"
 }
