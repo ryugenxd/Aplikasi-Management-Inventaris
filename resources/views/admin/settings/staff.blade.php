@@ -40,7 +40,7 @@
                             <div class="form-group mb-3">
                                 <label for="role">{{ __("role") }}</label>
                                 <select class="form-control" id="role">
-                                    <option selected value="-- {{ __("role") }} --">-- {{ __("role") }} --</option>
+                                    <option selected value="-- {{ __('role') }} --">-- {{ __("role") }} --</option>
                                     @foreach($roles as $role)
                                         <option value="{{$role->id}}">{{$role->name}}</option>
                                     @endforeach
@@ -132,13 +132,13 @@
                     $("#name").val(null);
                     $("#username").val(null);
                     $("#password").val(null);
-                    $("#role").val('-- Role --');
+                    $("#role").val("-- {{__('role')}} --");
                     $('#data-tabel').DataTable().ajax.reload();
                 },
                 error:function(err){
                     console.log(err);
                 },
-                
+
             });
     }
 
@@ -152,7 +152,7 @@
                     name:$("#name").val(),
                     username:$("#username").val(),
                     password:$("#password").val(),
-                    role_id:$("#role").val('-- Role --'),
+                    role_id:$("#role").val("-- {{ __('role') }} --"),
                     "_token":"{{csrf_token()}}"
                 },
                 success:function(res){
@@ -167,22 +167,22 @@
                     $("#name").val(null);
                     $("#username").val(null);
                     $("#password").val(null);
-                    $("#role").val('-- Role --');
+                    $("#role").val("-- {{ __('role') }} --");
                     $('#data-tabel').DataTable().ajax.reload();
-                    $('#simpan').text('Simpan');
+                    $('#simpan').text("{{__('save')}}");
                 },
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-                
+
             });
     }
-    
+
     $(document).ready(function(){
         isi();
 
         $('#simpan').on('click',function(){
-            if($(this).text() === 'Simpan Perubahan'){
+            if($(this).text() === "{{__('update')}}"){
                 ubah();
             }else{
                 simpan();
@@ -193,9 +193,9 @@
             $("#name").val(null);
             $("#username").val(null);
             $("#password").val(null);
-            $("#role").val('-- Role --');
-            $("#simpan").text("Simpan");
-            $("#TambahDataModalLabel").text("Tambah Profile Staff");
+            $("#role").val("-- {{ __('role') }} --");
+            $("#simpan").text("{{__('save')}}");
+            $("#TambahDataModalLabel").text("{{__('add data')}}");
         });
 
 
@@ -206,7 +206,7 @@
     $(document).on("click",".ubah",function(){
         let id = $(this).attr('id');
         $("#modal-button").click();
-        $("#simpan").text("Simpan Perubahan");
+        $("#simpan").text("{{__('update')}}");
         $("#TambahDataModalLabel").text("Ubah Profile Staff");
         $.ajax({
             url:"{{route('settings.staff.detail')}}",
@@ -222,7 +222,7 @@
                 $("#role").val(data.role_id);
             }
         });
-        
+
     });
 
     $(document).on("click",".hapus",function(){
@@ -235,12 +235,12 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Anda Yakin ?",
-            text: "Data Ini Akan Di Hapus",
+            title: "{{__('you are sure')}} ?",
+            text: "{{__('this data will be deleted')}}",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonText: "Ya,Hapus",
-            cancelButtonText: "Tidak, Kembali!",
+            confirmButtonText: "{{__('yes, delete')}}",
+            cancelButtonText: "{{__('no, cancel')}}!",
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
@@ -265,7 +265,7 @@
             }
         });
 
-        
+
     });
 </script>
 @endsection

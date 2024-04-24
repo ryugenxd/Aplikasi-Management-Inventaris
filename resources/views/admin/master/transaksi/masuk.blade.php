@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Transaksi Masuk')
+@section('title',__("incoming transaction"))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -31,13 +31,13 @@
                                             <th class="border-bottom-0" width="8%">{{__('no')}}</th>
                                             <th class="border-bottom-0">{{__('photo')}}</th>
                                             <th class="border-bottom-0">{{__('item code')}}</th>
-                                            <th class="border-bottom-0">NAMA</th>
-                                            <th class="border-bottom-0">JENIS</th>
-                                            <th class="border-bottom-0">SATUAN</th>
-                                            <th class="border-bottom-0">MERK</th>
-                                            <th class="border-bottom-0">STOK AWAL</th>
-                                            <th class="border-bottom-0">HARGA</th>
-                                            <th class="border-bottom-0" width="1%">Tindakan</th>
+                                            <th class="border-bottom-0">{{__('name')}}</th>
+                                            <th class="border-bottom-0">{{__('type')}}</th>
+                                            <th class="border-bottom-0">{{__('unit')}}</th>
+                                            <th class="border-bottom-0">{{__('brand')}}</th>
+                                            <th class="border-bottom-0">{{__('first stock')}}</th>
+                                            <th class="border-bottom-0">{{__('price')}}</th>
+                                            <th class="border-bottom-0" width="1%">{{__('action')}}</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -55,7 +55,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="TambahDataModalLabel">{{__('create an outgoing transaction')}}</h5>
+                            <h5 class="modal-title" id="TambahDataModalLabel">{{__('create incoming transactions')}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"  >&times;</span>
                             </button>
@@ -335,7 +335,7 @@
                     $('#kembali').click();
                     $("input[name='id']").val(null);
                     $("input[name='id_barang']").val(null);
-                    $("select[name='supplier'").val('-- Pilih Supplier --');
+                    $("select[name='supplier'").val("-- {{__('choose a supplier')}} --");
                     $("input[name='nama_barang']").val(null);
                     $("input[name='kode_barang']").val(null);
                     $("select[name='jenis_barang']").val(null);
@@ -401,7 +401,7 @@
         $("#cari-barang").on("click",detail);
 
         $('#simpan').on('click',function(){
-            if($(this).text() === 'Simpan Perubahan'){
+            if($(this).text() === "{__('update')}"){
                 ubah();
             }else{
                 simpan();
@@ -413,7 +413,7 @@
             $("input[name='kode']").val("BRGMSK-"+id);
             $("input[name='id']").val(null);
             $("input[name='id_barang']").val(null);
-            $("select[name='supplier'").val('-- Pilih Supplier --');
+            $("select[name='supplier'").val("-- {{__('choose a supplier')}} --");
             $("input[name='nama_barang']").val(null);
             $("input[name='tanggal_masuk']").val(null);
             $("input[name='kode_barang']").val(null);
@@ -430,7 +430,7 @@
 
     $(document).on("click",".ubah",function(){
         $("#modal-button").click();
-        $("#simpan").text("Simpan Perubahan");
+        $("#simpan").text("{{__('update')}}");
         let id = $(this).attr('id');
         $.ajax({
             url:"{{route('transaksi.masuk.detail')}}",
@@ -464,12 +464,12 @@
             buttonsStyling: false
         });
         swalWithBootstrapButtons.fire({
-            title: "Anda Yakin ?",
-            text: "Data Ini Akan Di Hapus",
+            title: "{{__('you are sure')}} ?",
+            text: "{{__('this data will be deleted')}}",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonText: "Ya,Hapus",
-            cancelButtonText: "Tidak, Kembali!",
+            confirmButtonText: "{{__('yes, delete')}}",
+            cancelButtonText: "{{__('no, cancel')}}!",
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
