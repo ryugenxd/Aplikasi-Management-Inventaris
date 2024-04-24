@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Laporan Barang Keluar')
+@section('title',__("outgoing goods report"))
 @section('content')
 <x-head-datatable/>
 <div class="container-fluid">
@@ -62,7 +62,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    
+
     $(document).ready(function(){
         const tabel = $('#data-tabel').DataTable({
             lengthChange: true,

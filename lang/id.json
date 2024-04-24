@@ -81,5 +81,19 @@
   "data deleted successfully":"data berhasil dihapus",
   "incorrect username or password":"username atau kata sandi salah",
   "login successful":"login berhasil",
-  "insufficient stock this month":"stok tidak mencukupi bulan ini"
+  "insufficient stock this month":"stok tidak mencukupi bulan ini",
+  "start date":"tanggal mulai",
+  "end date":"tanggal akhir",
+  "export to pdf":"ekspor ke pdf",
+  "export to excel":"ekspor ke excel",
+  "date of entry":"tanggal masuk",
+  "incoming item code":"kode barang masuk",
+  "item code":"kode barang",
+  "item":"barang",
+  "incoming amount":"jumlah masuk",
+  "outgoing amount":"jumlah keluar",
+  "stock amount":"jumlah stok",
+  "date":"tanggal",
+  "first stock":"stok awal",
+  "last stock":"stok akhir"
 }
