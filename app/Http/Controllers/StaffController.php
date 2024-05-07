@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StaffCreateRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\View\View;
@@ -50,13 +51,14 @@ class StaffController extends Controller
         }
     }
 
-    public function save(Request $request): JsonResponse
+    public function save(StaffCreateRequest $request): JsonResponse
     {
+        $data = $request -> validated();
         $user = new User();
-        $user -> name = $request->name;
-        $user -> username = $request->username;
-        $user -> password = bcrypt($request->password);
-        $user -> role_id = $request -> role_id;
+        $user -> name = $data['name'];
+        $user -> username = $data['username'];
+        $user -> password = bcrypt($data['password']);
+        $user -> role_id = $data['role_id'];
         $status = $user -> save();
         if(!$status){
             return response()->json(

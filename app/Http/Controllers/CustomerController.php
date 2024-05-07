@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CustomerCreateRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 use Yajra\DataTables\DataTables;
@@ -30,12 +31,13 @@ class CustomerController extends Controller
         }
     }
 
-    public function save(Request $request): JsonResponse
+    public function save(CustomerCreateRequest $request): JsonResponse
     {
+        $data = $request -> validated();
         $custormers = new Customer();
-        $custormers -> name = $request->name;
-        $custormers -> phone_number = $request->phone_number;
-        $custormers -> address = $request->address;
+        $custormers -> name = $data['name'];
+        $custormers -> phone_number = $data['phone_number'];
+        $custormers -> address = $data['address'];
         $status = $custormers -> save();
         if(!$status){
             return response()->json(
