@@ -66,7 +66,8 @@
           <input type="password" class="form-control" placeholder="Password" id="pw">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+              <!-- nah disini w kasi id -->
+              <span class="fas fa-eye" id="icon-pw"></span>
             </div>
           </div>
         </div>
@@ -200,6 +201,25 @@ $(document).ready(function(){
       }
     });
 });
+</script>
+<!-- yahhooo heheheh -->
+<script>
+  $(document).ready(function() {
+    // okeh iya yoshaaaaaaa horeeee omagaaaa
+    // gimana ? coba run
+    // malah icon slash nya cok, pas diklik ,iya omagaaa  coba kirim di wa  okeh owlah ga bisa balik ke icon eye ?
+    $("#icon-pw").click(function() {
+      if($(this).attr("class") == "fas fa-eye"){
+        $(this).addClass("fa-eye-slash");
+        $(this).removeClass("fa-eye");
+      }else{
+        $(this).removeClass("fa-eye-slash");
+        $(this).addClass("fa-eye");
+      }
+      var input = $("#pw");
+      input.attr("type") === "password" ? input.attr("type", "text") : input.attr("type", "password");
+    });
+  });
 </script>
 </body>
 </html>
