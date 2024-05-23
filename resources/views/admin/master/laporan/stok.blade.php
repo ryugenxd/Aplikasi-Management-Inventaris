@@ -29,8 +29,8 @@
                         </div>
                         <div class="col-lg-6  w-100 d-flex justify-content-end align-items-center">
                                 <button class="btn btn-outline-primary font-weight-bold m-1" id="print"><i class="fas fa-print m-1"></i>{{ __("print") }}</button>
-                                <button class="btn btn-outline-danger font-weight-bold m-1" id="export-pdf">{{ __("messages.export-to", ["file" => "pdf"]) }}</button>
-                                <button class="btn btn-outline-success font-weight-bold m-1" id="export-excel">{{ __("messages.export-to", ["file" => "excel"]) }}</button>
+                                <button class="btn btn-outline-danger font-weight-bold m-1" id="export-pdf"><i class="fas fa-file-pdf m-1"></i>{{ __("messages.export-to", ["file" => "pdf"]) }}</button>
+                                <button class="btn btn-outline-success font-weight-bold m-1" id="export-excel"><i class="fas fa-file-excel m-1"></i>{{ __("messages.export-to", ["file" => "excel"]) }}</button>
                         </div>
                     </div>
                 </div>

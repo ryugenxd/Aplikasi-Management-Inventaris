@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus"></i> {{ __("add data") }}</button>
                     @endif
                     </div>
                 </div>
@@ -129,7 +129,11 @@
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-                
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
             });
     }
 
@@ -161,10 +165,17 @@
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-                
+<<<<<<< HEAD
+
             });
     }
-    
+
+=======
+
+            });
+    }
+
+>>>>>>> 7bd794d8 (feat:add icons)
     $(document).ready(function(){
         isi();
 
@@ -182,7 +193,11 @@
             $("#simpan").text("Simpan");
         });
 
-      
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
@@ -199,13 +214,21 @@
                 "_token":"{{csrf_token()}}"
             },
             success:function({data}){
-                
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
                 $("#id").val(data.id);
                 $("#name").val(data.name);
                 $("#desc").val(data.description);
             }
         });
-        
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
     });
 
     $(document).on("click",".hapus",function(){
@@ -248,9 +271,17 @@
             }
         });
 
-        
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
 </script>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 7bd794d8 (feat:add icons)

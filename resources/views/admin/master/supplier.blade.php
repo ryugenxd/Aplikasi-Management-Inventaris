@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{__('add suppliers')}}</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus"></i> {{__('add suppliers')}}</button>
                     @endif
                     </div>
                 </div>

@@ -8,7 +8,7 @@
             <div class="card w-100">
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus m-1"></i>{{ __("add data") }}</button>
                     </div>
                 </div>
 

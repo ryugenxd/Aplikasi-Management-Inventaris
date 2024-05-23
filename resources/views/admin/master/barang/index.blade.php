@@ -9,7 +9,7 @@
                 <div class="card-header row">
                     <div class="d-flex justify-content-end align-items-center w-100">
                     @if(Auth::user()->role->name != 'staff')
-                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button">{{ __("add data") }}</button>
+                        <button class="btn btn-success" type="button"  data-toggle="modal" data-target="#TambahData" id="modal-button"><i class="fas fa-plus"></i> {{ __("add data") }}</button>
                     @endif
                     </div>
                 </div>
@@ -246,7 +246,11 @@
                 error:function(err){
                     console.log(err);
             },
-                
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
         });
     }
 
@@ -301,10 +305,17 @@
                 error:function(err){
                     console.log(err);
             },
-                
+<<<<<<< HEAD
+
         });
     }
-    
+
+=======
+
+        });
+    }
+
+>>>>>>> 7bd794d8 (feat:add icons)
     $(document).ready(function(){
         $("#harga").on("input",harga);
         isi();
@@ -361,7 +372,11 @@
                 $("input[name='harga']").val(data.price);
             }
         });
-        
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
     });
 
     $(document).on("click",".hapus",function(){
@@ -404,9 +419,17 @@
             }
         });
 
-        
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
 </script>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 7bd794d8 (feat:add icons)
