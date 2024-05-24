@@ -110,6 +110,7 @@
             $.ajax({
                 url:`{{route('customer.save')}}`,
                 type:"post",
+                contenType:"json",
                 data:{
                     name:$("#name").val(),
                     phone_number:$("#phone_number").val(),

@@ -7,6 +7,9 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 use Yajra\DataTables\DataTables;
 use App\Models\Customer;
+use App\Http\Requests\CreateCustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
+use Illuminate\Http\Exceptions\HttpValidationException;
 
 class CustomerController extends Controller
 {
@@ -30,7 +33,7 @@ class CustomerController extends Controller
         }
     }
 
-    public function save(Request $request): JsonResponse
+    public function save(CreateCustomerRequest $request): JsonResponse
     {
         $custormers = new Customer();
         $custormers -> name = $request->name;
@@ -50,18 +53,29 @@ class CustomerController extends Controller
     public function detail(Request $request): JsonResponse
     {
         $id = $request -> id;
-        $custormer = Customer::find($id);
+        $validated = $request->validate([
+            'id' => 'required|integer'
+        ]);
+        $custormer = Customer::find($validated['id']);
+        if(!$custormer) throw new HttpValidationException(response([
+            "message"=>"not found."
+        ],404));
         return response()->json(
             ["data"=>$custormer]
         )->setStatusCode(200);
     }
 
-    public function update(Request $request): JsonResponse
+    public function update(UpdateCustomerRequest $request): JsonResponse
     {
-        $id = $request -> id;
-        $custormers = Customer::find($id);
-        $custormers -> fill($request->all());
-        $status = $custormers -> save();
+        $validated = $request->validate([
+            'id' => 'required|integer'
+        ]);
+        $custormer = Customer::find($validated['id']);
+        if(!$custormer) throw new HttpValidationException(response([
+            "message"=>"not found."
+        ],404));
+        $custormer -> fill($request->all());
+        $status = $custormer -> save();
         if(!$status){
             return response()->json(
                 ["message"=>__("data failed to change")]
@@ -75,7 +89,13 @@ class CustomerController extends Controller
     public function delete(Request $request): JsonResponse
     {
         $id = $request -> id;
-        $custormer = Customer::find($id);
+        $validated = $request->validate([
+            'id' => 'required|integer'
+        ]);
+        $custormer = Customer::find($validate['id']);
+        if(!$custormer) throw new HttpValidationException(response([
+            "message"=>"not found."
+        ],404));
         $status = $custormer -> delete();
         if(!$status){
             return response()->json(

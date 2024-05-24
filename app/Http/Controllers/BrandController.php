@@ -12,13 +12,17 @@ use Yajra\DataTables\DataTables;
 use Illuminate\View\View;
 use App\Models\Brand;
 
+// Represetation Class Controller Brand
+
 class BrandController extends Controller
 {
+    // return view page barand
     public function index(): View
     {
         return view('admin.master.barang.merk');
     }
 
+    // return list brand in format json
     public function list(Request $request): JsonResponse
     {
         $brands = Brand::latest()->get();
@@ -34,6 +38,7 @@ class BrandController extends Controller
         }
     }
 
+    // save new brand
     public function save(CreateBrandRequest $request): JsonResponse
     {
 
@@ -53,6 +58,7 @@ class BrandController extends Controller
         ]) -> setStatusCode(200);
     }
 
+    // get detail brand
     public function detail(DetailBrandRequest $request): JsonResponse
     {
         $id = $request -> id;
@@ -62,6 +68,7 @@ class BrandController extends Controller
         )->setStatusCode(200);
     }
 
+    // update brand
     public function update(UpdateBrandRequest $request): JsonResponse
     {
         $id = $request -> id;
@@ -78,6 +85,7 @@ class BrandController extends Controller
         ]) -> setStatusCode(200);
     }
 
+    // delete brand
     public function delete(DeleteBrandRequest $request)
     {
         $id = $request -> id;
