@@ -92,7 +92,7 @@ class CustomerController extends Controller
         $validated = $request->validate([
             'id' => 'required|integer'
         ]);
-        $custormer = Customer::find($validate['id']);
+        $custormer = Customer::find($validated['id']);
         if(!$custormer) throw new HttpValidationException(response([
             "message"=>"not found."
         ],404));

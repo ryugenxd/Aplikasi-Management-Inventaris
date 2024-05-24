@@ -198,21 +198,13 @@
                 "_token":"{{csrf_token()}}"
             },
             success:function({data}){
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
                 $("#id").val(data.id);
                 $("#name").val(data.name);
                 $("#desc").val(data.description);
             }
         });
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
     });
 
     $(document).on("click",".hapus",function(){
@@ -255,17 +247,10 @@
             }
         });
 
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
 </script>
-<<<<<<< HEAD
+
 @endsection
-=======
-@endsection
->>>>>>> 7bd794d8 (feat:add icons)
+

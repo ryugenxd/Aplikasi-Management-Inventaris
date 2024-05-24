@@ -128,11 +128,7 @@
                 error:function(err){
                     console.log(err);
                 },
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
             });
     }
 
@@ -164,17 +160,11 @@
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-<<<<<<< HEAD
+
 
             });
     }
 
-=======
-
-            });
-    }
-
->>>>>>> 7bd794d8 (feat:add icons)
     $(document).ready(function(){
         isi();
 
@@ -214,11 +204,7 @@
                 $("#desc").val(data.description);
             }
         });
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
     });
 
     $(document).on("click",".hapus",function(){
@@ -261,17 +247,9 @@
             }
         });
 
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
 </script>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 7bd794d8 (feat:add icons)

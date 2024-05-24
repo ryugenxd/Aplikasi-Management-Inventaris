@@ -72,7 +72,7 @@
         <!-- /.content-header -->
 
          <!-- Main content -->
-        <section class="content">
+        <section class="content text-capitalize">
             @yield('content')
         </section>
     </div>

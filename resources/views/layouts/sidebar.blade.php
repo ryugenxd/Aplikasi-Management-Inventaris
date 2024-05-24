@@ -9,11 +9,11 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      
+
 
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-2 text-capitalize">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-header">{{ __("menu") }}</li>
          <li class="nav-item">
@@ -24,7 +24,7 @@
               </p>
             </a>
           </li>
-         
+
           <li class="nav-item">
             <a href="javascript:void(0)" class="nav-link text-white">
               <i class="nav-icon fas fa-box"></i>

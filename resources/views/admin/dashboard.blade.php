@@ -173,7 +173,7 @@
               <div class="input-group mb-3">
                 <div class="w-100 mb-3 d-flex align-items-center py-3">
                   <input type="month" name="month" id="month" class="form-control w-50">
-                  <button id="filter" class="btn btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
+                  <button id="filter" class="btn d-flex btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@
                 <div class="input-group mb-3">
                   <div class="w-100 mb-3 d-flex align-items-center py-3">
                     <input type="month" name="month-income" id="month-income" class="form-control w-50">
-                    <button id="filter-income" class="btn btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
+                    <button id="filter-income" class="d-flex btn btn-primary mx-2 text-capitalize"><i class="fas fa-filter"></i>{{ __("filter") }}</button>
                   </div>
                 </div>
               </div>
