@@ -129,11 +129,6 @@
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
             });
     }
 
@@ -165,17 +160,11 @@
                 error:function(err){
                     console.log(err.responJson.text);
                 },
-<<<<<<< HEAD
 
             });
     }
 
-=======
 
-            });
-    }
-
->>>>>>> 7bd794d8 (feat:add icons)
     $(document).ready(function(){
         isi();
 
@@ -193,11 +182,6 @@
             $("#simpan").text("Simpan");
         });
 
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 7bd794d8 (feat:add icons)
     });
 
 
