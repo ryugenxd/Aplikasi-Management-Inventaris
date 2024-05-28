@@ -57,7 +57,7 @@
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Username" id="user">
           <div class="input-group-append">
-            <div class="input-group-text">
+            <div class="input-group-text" style="max-width:40px !important;">
               <span class="fas fa-user"></span>
             </div>
           </div>
@@ -65,22 +65,12 @@
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="Password" id="pw">
           <div class="input-group-append">
-            <div class="input-group-text">
+            <div class="input-group-text" style="max-width:40px !important;">
               <!-- nah disini w kasi id -->
               <span class="fas fa-eye" id="icon-pw"></span>
             </div>
           </div>
         </div>
-        <!-- <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-              Ingat Saya
-              </label>
-            </div>
-          </div>
-        </div> -->
         <div class="social-auth-links text-center mt-2 mb-3">
           <button type="submit" class="btn btn-primary btn-block font-weight-bold">{{ __("messages.login") }}</button>
         </div>
