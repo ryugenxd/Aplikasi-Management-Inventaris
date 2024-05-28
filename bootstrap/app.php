@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware -> alias([
-            'staff.middleware'=>StaffMiddleware::class,
+            'employee.middleware'=>StaffMiddleware::class,
             'localization'=>DetectChangeAppLanguage::class,
         ]);
     })

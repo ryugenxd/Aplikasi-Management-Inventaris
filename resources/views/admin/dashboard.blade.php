@@ -138,7 +138,7 @@
               <div class="icon">
                 <i class="ion ion-android-person"></i>
               </div>
-              <a href="{{route('settings.users')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('settings.employee')}}" class="small-box-footer" style="color:white !important;">{{ __('messages.more-info') }} <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 

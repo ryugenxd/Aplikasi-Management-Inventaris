@@ -14,7 +14,7 @@ use App\Http\Controllers\TransactionOutController;
 use App\Http\Controllers\ReportGoodsInController;
 use App\Http\Controllers\ReportGoodsOutController;
 use App\Http\Controllers\ReportStockController;
-use App\Http\Controllers\StaffController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\WebSettingController;
 use App\Http\Controllers\AdminatorController;
 use App\Http\Controllers\ProfileController;
@@ -34,7 +34,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
         Route::post('/kode','detailByCode')->name('barang.code');
         Route::get('/daftar-barang','list')->name('barang.list');
 
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.save');
             Route::post('/info','detail')->name('barang.detail');
             Route::post('/ubah','update')->name('barang.update');
@@ -46,7 +46,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     Route::controller(CategoryController::class)->prefix("barang/jenis")->group(function(){
         Route::get('/','index')->name('barang.jenis');
         Route::get('/daftar-jenis','list')->name('barang.jenis.list');
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.jenis.save');
             Route::post('/info','detail')->name('barang.jenis.detail');
             Route::put('/ubah','update')->name('barang.jenis.update');
@@ -61,7 +61,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     Route::controller(UnitController::class)->prefix('/barang/satuan')->group(function(){
         Route::get('/','index')->name('barang.satuan');
         Route::get('/daftar-satuan','list')->name('barang.satuan.list');
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.satuan.save');
             Route::post('/info','detail')->name('barang.satuan.detail');
             Route::put('/ubah','update')->name('barang.satuan.update');
@@ -75,7 +75,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     Route::controller(BrandController::class)->prefix("/barang/merk")->group(function(){
         Route::get('/','index')->name('barang.merk');
         Route::get('/daftar-merk','list')->name('barang.merk.list');
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.merk.save');
             Route::post('/info','detail')->name('barang.merk.detail');
             Route::put('/ubah','update')->name('barang.merk.update');
@@ -88,7 +88,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     Route::controller(CustomerController::class)->prefix('/customer')->group(function(){
         Route::get('/','index')->name('customer');
         Route::get('/daftar-customer','list')->name('customer.list');
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('customer.save');
             Route::post('/info','detail')->name('customer.detail');
             Route::put('/ubah','update')->name('customer.update');
@@ -101,7 +101,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     Route::controller(SupplierController::class)->prefix('/supplier')->group(function(){
         Route::get('/','index')->name('supplier');
         Route::get('/daftar-supplier','list')->name('supplier.list');
-        Route::middleware(['staff.middleware'])->group(function(){
+        Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('supplier.save');
             Route::post('/info','detail')->name('supplier.detail');
             Route::put('/ubah','update')->name('supplier.update');
@@ -152,17 +152,17 @@ Route::middleware(['auth', "localization"])-> group(function(){
     });
 
     // laporan penghasilan
-    Route::get('/laporan/pendapatan',[ReportFinancialController::class,'income'])->name('laporan.pendapatan');
+    Route::get('/report/income',[ReportFinancialController::class,'income'])->name('laporan.pendapatan');
 
     // pengaturan pengguna
-    Route::middleware(['staff.middleware'])->group(function(){
-        Route::controller(StaffController::class)->prefix('/pengaturan/pengguna')->group(function(){
-            Route::get('/','index')->name('settings.users');
-            Route::get('/list','list')->name('settings.staff.list');
-            Route::post('/save','save')->name('settings.staff.save');
-            Route::post('/detail','detail')->name('settings.staff.detail');
-            Route::put('/update','update')->name('settings.staff.update');
-            Route::delete('/delete','delete')->name('settings.staff.delete');
+    Route::middleware(['employee.middleware'])->group(function(){
+        Route::controller(EmployeeController::class)->prefix('/settings/employee')->group(function(){
+            Route::get('/','index')->name('settings.employee');
+            Route::get('/list','list')->name('settings.employee.list');
+            Route::post('/save','save')->name('settings.employee.save');
+            Route::post('/detail','detail')->name('settings.employee.detail');
+            Route::put('/update','update')->name('settings.employee.update');
+            Route::delete('/delete','delete')->name('settings.employee.delete');
         });
     });
 
@@ -172,8 +172,8 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // Route::put('/pengaturan/web/update',[WebSettingController::class,'update'])->name('settings.web.update');
 
     // pengaturan profile
-    Route::get('/pengeturan/profile',[ProfileController::class,'index'])->name('settings.profile');
-    Route::post('/pengeturan/profile',[ProfileController::class,'update'])->name('settings.profile.update');
+    Route::get('/settings/profile',[ProfileController::class,'index'])->name('settings.profile');
+    Route::post('/settings/profile',[ProfileController::class,'update'])->name('settings.profile.update');
 
     // logout
     Route::get('/logout',[LoginController::class,'logout'])->name('login.delete');

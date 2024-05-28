@@ -138,11 +138,11 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-            @if(Auth::user()->role->name != 'staff')
+            @if(Auth::user()->role->name != 'employee')
               <li class="nav-item">
-                <a href="{{route('settings.users')}}" class="nav-link text-white">
+                <a href="{{route('settings.employee')}}" class="nav-link text-white">
                 <i class="fas fa-angle-right"></i>
-                  <p>{{ __("user") }}</p>
+                  <p>{{ __("employee") }}</p>
                 </a>
               </li>
             @endif

@@ -11,28 +11,28 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Role;
 
-class StaffController extends Controller
+class EmployeeController extends Controller
 {
     public function index(): View
-    {   $roles = Role::where('name','staff')->get();
+    {   $roles = Role::where('name','employee')->get();
         if(Auth::user()->role->name == 'super_admin'){
             $roles = Role::all();
         }
-        return view('admin.settings.staff',compact('roles'));
+        return view('admin.settings.employee',compact('roles'));
     }
 
     public function list(Request $request): JsonResponse
     {
         $staff = User::with('role')->whereHas('role',function(Builder $builder){
-            $builder = $builder -> where('name','staff');
+            $builder = $builder -> where('name','employee');
             if(Auth::user()->role->name != 'admin'){
                 $builder  ->
                 orWhere('name','admin')
                 -> orWhere('name','super_admin');
             }
         })->latest()->get();
-        if(Auth::user()->role->name == 'staff'){
-            $id_staff = Role::where('name','staff')->fisrt()->id;
+        if(Auth::user()->role->name == 'employee'){
+            $id_staff = Role::where('name','employee')->fisrt()->id;
             $staff = User::with('role')->where('role_id',$id_staff)->latest()->get();
         }
         if($request -> ajax()){

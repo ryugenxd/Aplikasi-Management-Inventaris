@@ -81,7 +81,7 @@
             responsive: true, lengthChange: true, autoWidth: false,
             processing:true,
             serverSide:true,
-            ajax:`{{route('settings.staff.list')}}`,
+            ajax:`{{route('settings.employee.list')}}`,
             columns:[
                 {
                     "data":null,"sortable":false,
@@ -111,7 +111,7 @@
 
     function simpan(){
             $.ajax({
-                url:`{{route('settings.staff.save')}}`,
+                url:`{{route('settings.employee.save')}}`,
                 type:"post",
                 data:{
                     name:$("#name").val(),
@@ -145,7 +145,7 @@
 
     function ubah(){
             $.ajax({
-                url:`{{route('settings.staff.update')}}`,
+                url:`{{route('settings.employee.update')}}`,
                 type:"put",
                 data:{
                     id:$("#id").val(),
@@ -209,7 +209,7 @@
         $("#simpan").text("{{__('update')}}");
         $("#TambahDataModalLabel").text("Ubah Profile Staff");
         $.ajax({
-            url:"{{route('settings.staff.detail')}}",
+            url:"{{route('settings.employee.detail')}}",
             type:"post",
             data:{
                 id:id,
@@ -245,7 +245,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url:"{{route('settings.staff.delete')}}",
+                    url:"{{route('settings.employee.delete')}}",
                     type:"delete",
                     data:{
                         id:id,

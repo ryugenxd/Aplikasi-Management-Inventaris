@@ -16,12 +16,12 @@ class UserSeeder extends Seeder
     {
         $role_super_admin = Role::where('name','super_admin')-> first();
         $role_admin = Role::where('name','admin')->first();
-        $role_staff = Role::where('name','staff')->first();
+        $role_employee = Role::where('name','employee')->first();
         // dd($role_admin->id);
         User::create([
             "name" => "ryugen",
             "username" => "ryugen",
-            "role_id" => $role_staff -> id,
+            "role_id" =>  $role_employee -> id,
             "password" => bcrypt('12345678')
         ]);
         User::create([
