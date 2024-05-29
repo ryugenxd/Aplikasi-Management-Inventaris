@@ -104,6 +104,15 @@
     }
 
     function simpan(){
+        if($('#name').val().length == 0){
+            return Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "nama tidak boleh kosong !",
+                showConfirmButton: false,
+                imer: 1500
+            });
+        }
             $.ajax({
                 url:`{{route('barang.merk.save')}}`,
                 type:"post",

@@ -217,6 +217,24 @@
         Form.append('unit_id', unit_id);
         Form.append('brand_id', brand_id);
         Form.append('price', price);
+        if(name.length == 0){
+            return Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "nama tidak boleh kosong !",
+                showConfirmButton: false,
+                imer: 1500
+            });
+        }
+        if(price.length == 0){
+            return Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "harga tidak boleh kosong !",
+                showConfirmButton: false,
+                imer: 1500
+            });
+        }
         $.ajax({
                 url:`{{route('barang.save')}}`,
                 type:"post",
