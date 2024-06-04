@@ -45,7 +45,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // jenis barang
     Route::controller(CategoryController::class)->prefix("barang/jenis")->group(function(){
         Route::get('/','index')->name('barang.jenis');
-        Route::get('/daftar-jenis','list')->name('barang.jenis.list');
+        Route::get('/daftar','list')->name('barang.jenis.list');
         Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.jenis.save');
             Route::post('/info','detail')->name('barang.jenis.detail');
@@ -60,7 +60,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // satuan barang
     Route::controller(UnitController::class)->prefix('/barang/satuan')->group(function(){
         Route::get('/','index')->name('barang.satuan');
-        Route::get('/daftar-satuan','list')->name('barang.satuan.list');
+        Route::get('/daftar','list')->name('barang.satuan.list');
         Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.satuan.save');
             Route::post('/info','detail')->name('barang.satuan.detail');
@@ -74,7 +74,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // merk barang
     Route::controller(BrandController::class)->prefix("/barang/merk")->group(function(){
         Route::get('/','index')->name('barang.merk');
-        Route::get('/daftar-merk','list')->name('barang.merk.list');
+        Route::get('/daftar','list')->name('barang.merk.list');
         Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('barang.merk.save');
             Route::post('/info','detail')->name('barang.merk.detail');
@@ -87,7 +87,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // customer (izin untuk staff hanya read)
     Route::controller(CustomerController::class)->prefix('/customer')->group(function(){
         Route::get('/','index')->name('customer');
-        Route::get('/daftar-customer','list')->name('customer.list');
+        Route::get('/daftar','list')->name('customer.list');
         Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('customer.save');
             Route::post('/info','detail')->name('customer.detail');
@@ -100,7 +100,7 @@ Route::middleware(['auth', "localization"])-> group(function(){
     // supplier (izin untuk staff hanya read)
     Route::controller(SupplierController::class)->prefix('/supplier')->group(function(){
         Route::get('/','index')->name('supplier');
-        Route::get('/daftar-supplier','list')->name('supplier.list');
+        Route::get('/daftar','list')->name('supplier.list');
         Route::middleware(['employee.middleware'])->group(function(){
             Route::post('/simpan','save')->name('supplier.save');
             Route::post('/info','detail')->name('supplier.detail');
@@ -111,12 +111,12 @@ Route::middleware(['auth', "localization"])-> group(function(){
 
     // Transaksi  masuk
     Route::controller(TransactionInController::class)->prefix('/transaksi/masuk')->group(function(){
-        Route::get('/transaksi/masuk','index')->name('transaksi.masuk');
-        Route::get('/transaksi/masuk/list','list')->name('transaksi.masuk.list');
-        Route::post('/transaksi/masuk/save','save')->name('transaksi.masuk.save');
-        Route::post('/transaksi/masuk/detail','detail')->name('transaksi.masuk.detail');
-        Route::put('/transaksi/masuk/update','update')->name('transaksi.masuk.update');
-        Route::delete('/transaksi/masuk/delete','delete')->name('transaksi.masuk.delete');
+        Route::get('/','index')->name('transaksi.masuk');
+        Route::get('/list','list')->name('transaksi.masuk.list');
+        Route::post('/save','save')->name('transaksi.masuk.save');
+        Route::post('/detail','detail')->name('transaksi.masuk.detail');
+        Route::put('/update','update')->name('transaksi.masuk.update');
+        Route::delete('/delete','delete')->name('transaksi.masuk.delete');
         Route::get('/barang/list/in','listIn')->name('barang.list.in');
     });
 
