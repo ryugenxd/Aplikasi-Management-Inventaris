@@ -9,7 +9,7 @@ use Yajra\DataTables\DataTables;
 use App\Models\Customer;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
-use Illuminate\Http\Exceptions\HttpValidationException;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class CustomerController extends Controller
 {
@@ -20,9 +20,9 @@ class CustomerController extends Controller
 
     public function list(Request $request): JsonResponse
     {
-        $custormers = Customer::latest()->get();
+        $customers = Customer::latest()->get();
         if($request -> ajax()){
-            return DataTables::of($custormers)
+            return DataTables::of($customers)
             ->addColumn('tindakan',function($data){
                 $button = "<button class='ubah btn btn-success m-1' id='".$data->id."'><i class='fas fa-pen m-1'></i>".__("edit")."</button>";
                 $button .= "<button class='hapus btn btn-danger m-1' id='".$data->id."'><i class='fas fa-trash m-1'></i>".__("delete")."</button>";
@@ -35,11 +35,11 @@ class CustomerController extends Controller
 
     public function save(CreateCustomerRequest $request): JsonResponse
     {
-        $custormers = new Customer();
-        $custormers -> name = $request->name;
-        $custormers -> phone_number = $request->phone_number;
-        $custormers -> address = $request->address;
-        $status = $custormers -> save();
+        $customers = new Customer();
+        $customers -> name = $request->name;
+        $customers -> phone_number = $request->phone_number;
+        $customers -> address = $request->address;
+        $status = $customers -> save();
         if(!$status){
             return response()->json(
                 ["message"=>__("failed to save")]
@@ -52,12 +52,11 @@ class CustomerController extends Controller
 
     public function detail(Request $request): JsonResponse
     {
-        $id = $request -> id;
         $validated = $request->validate([
             'id' => 'required|integer'
         ]);
         $custormer = Customer::find($validated['id']);
-        if(!$custormer) throw new HttpValidationException(response([
+        if(!$custormer) throw new HttpResponseException(response([
             "message"=>"not found."
         ],404));
         return response()->json(
@@ -71,7 +70,7 @@ class CustomerController extends Controller
             'id' => 'required|integer'
         ]);
         $custormer = Customer::find($validated['id']);
-        if(!$custormer) throw new HttpValidationException(response([
+        if(!$custormer) throw new HttpResponseException(response([
             "message"=>"not found."
         ],404));
         $custormer -> fill($request->all());
@@ -89,11 +88,8 @@ class CustomerController extends Controller
     public function delete(Request $request): JsonResponse
     {
         $id = $request -> id;
-        $validated = $request->validate([
-            'id' => 'required|integer'
-        ]);
-        $custormer = Customer::find($validated['id']);
-        if(!$custormer) throw new HttpValidationException(response([
+        $custormer = Customer::find($id);
+        if(!$custormer) throw new HttpResponseException(response([
             "message"=>"not found."
         ],404));
         $status = $custormer -> delete();
